@@ -1,0 +1,2584 @@
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_fmul
+  20              		.global	__aeabi_fadd
+  21              		.global	__aeabi_f2iz
+  22              		.section	.text.BaseMotor_Theta,"ax",%progbits
+  23              		.align	2
+  24              		.global	BaseMotor_Theta
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	BaseMotor_Theta, %function
+  28              	BaseMotor_Theta:
+  29              	.LFB64:
+  30              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** #include "math.h"
+   3:main.c        **** #include <stdio.h>
+   4:main.c        **** #include <string.h>
+   5:main.c        **** 
+   6:main.c        **** int previous_compare = 0;
+   7:main.c        **** int flag = 0;
+   8:main.c        **** 
+   9:main.c        **** // Link Lengths
+  10:main.c        **** float a2 = 6.2;
+  11:main.c        **** float a4 = 3.5;
+  12:main.c        **** 
+  13:main.c        **** typedef enum {
+  14:main.c        ****     pwm_1 = 1,
+  15:main.c        ****     pwm_2 = 2,
+  16:main.c        **** } PWM_type;
+  17:main.c        **** 
+  18:main.c        **** int BaseMotor_Theta(float Angle) {
+  31              		.loc 1 18 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+  35              	.LVL0:
+  36 0000 08B5     		push	{r3, lr}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 3, -8
+  39              		.cfi_offset 14, -4
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 2
+
+
+  40              	.LVL1:
+  19:main.c        ****     int compare;
+  20:main.c        ****     int min_comp = 1400; 
+  21:main.c        ****     int max_comp = 7200; 
+  22:main.c        ****     int min_angle = 0; 
+  23:main.c        ****     int max_angle = 180;
+  24:main.c        ****     
+  25:main.c        ****     compare = ((max_comp - min_comp) / (max_angle - min_angle)) * (Angle - min_angle) + min_comp;
+  41              		.loc 1 25 0
+  42 0002 4FF08441 		mov	r1, #1107296256
+  43 0006 FFF7FEFF 		bl	__aeabi_fmul
+  44              	.LVL2:
+  45 000a 0349     		ldr	r1, .L3
+  46 000c FFF7FEFF 		bl	__aeabi_fadd
+  47              	.LVL3:
+  48 0010 FFF7FEFF 		bl	__aeabi_f2iz
+  49              	.LVL4:
+  26:main.c        ****     return compare;
+  27:main.c        **** }
+  50              		.loc 1 27 0
+  51 0014 08BD     		pop	{r3, pc}
+  52              	.L4:
+  53 0016 00BF     		.align	2
+  54              	.L3:
+  55 0018 0000AF44 		.word	1152319488
+  56              		.cfi_endproc
+  57              	.LFE64:
+  58              		.size	BaseMotor_Theta, .-BaseMotor_Theta
+  59              		.section	.text.TopMotor_Theta,"ax",%progbits
+  60              		.align	2
+  61              		.global	TopMotor_Theta
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	TopMotor_Theta, %function
+  65              	TopMotor_Theta:
+  66              	.LFB65:
+  28:main.c        **** 
+  29:main.c        **** int TopMotor_Theta(float Angle) {
+  67              		.loc 1 29 0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              	.LVL5:
+  72 0000 08B5     		push	{r3, lr}
+  73              		.cfi_def_cfa_offset 8
+  74              		.cfi_offset 3, -8
+  75              		.cfi_offset 14, -4
+  76              	.LVL6:
+  30:main.c        ****     int compare;
+  31:main.c        ****     int min_comp = 1400; 
+  32:main.c        ****     int max_comp = 7100; 
+  33:main.c        ****     int min_angle = -90; 
+  34:main.c        ****     int max_angle = 90;
+  35:main.c        ****     
+  36:main.c        ****     compare = ((max_comp - min_comp) / (max_angle - min_angle)) * (Angle - min_angle) + min_comp;
+  77              		.loc 1 36 0
+  78 0002 0649     		ldr	r1, .L7
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 3
+
+
+  79 0004 FFF7FEFF 		bl	__aeabi_fadd
+  80              	.LVL7:
+  81 0008 0549     		ldr	r1, .L7+4
+  82 000a FFF7FEFF 		bl	__aeabi_fmul
+  83              	.LVL8:
+  84 000e 0549     		ldr	r1, .L7+8
+  85 0010 FFF7FEFF 		bl	__aeabi_fadd
+  86              	.LVL9:
+  87 0014 FFF7FEFF 		bl	__aeabi_f2iz
+  88              	.LVL10:
+  37:main.c        ****     return compare;
+  38:main.c        **** }
+  89              		.loc 1 38 0
+  90 0018 08BD     		pop	{r3, pc}
+  91              	.L8:
+  92 001a 00BF     		.align	2
+  93              	.L7:
+  94 001c 0000B442 		.word	1119092736
+  95 0020 0000F841 		.word	1106771968
+  96 0024 0000AF44 		.word	1152319488
+  97              		.cfi_endproc
+  98              	.LFE65:
+  99              		.size	TopMotor_Theta, .-TopMotor_Theta
+ 100              		.section	.text.MoveMotor,"ax",%progbits
+ 101              		.align	2
+ 102              		.global	MoveMotor
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.type	MoveMotor, %function
+ 106              	MoveMotor:
+ 107              	.LFB66:
+  39:main.c        **** 
+  40:main.c        **** void MoveMotor(int compare, PWM_type pwm) {
+ 108              		.loc 1 40 0
+ 109              		.cfi_startproc
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 0, uses_anonymous_args = 0
+ 112              	.LVL11:
+ 113 0000 70B5     		push	{r4, r5, r6, lr}
+ 114              		.cfi_def_cfa_offset 16
+ 115              		.cfi_offset 4, -16
+ 116              		.cfi_offset 5, -12
+ 117              		.cfi_offset 6, -8
+ 118              		.cfi_offset 14, -4
+ 119 0002 0546     		mov	r5, r0
+ 120 0004 0E46     		mov	r6, r1
+  41:main.c        ****     if (compare - previous_compare > 0) {
+ 121              		.loc 1 41 0
+ 122 0006 174B     		ldr	r3, .L22
+ 123 0008 1C68     		ldr	r4, [r3]
+ 124 000a 031B     		subs	r3, r0, r4
+ 125 000c 002B     		cmp	r3, #0
+ 126 000e 0DDC     		bgt	.L10
+ 127 0010 0FE0     		b	.L20
+ 128              	.LVL12:
+ 129              	.L14:
+ 130              	.LBB2:
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 4
+
+
+  42:main.c        ****         for (int i = previous_compare; i <= compare; i += 20) {
+  43:main.c        ****             if (pwm == pwm_1) {
+ 131              		.loc 1 43 0
+ 132 0012 012E     		cmp	r6, #1
+ 133 0014 03D1     		bne	.L12
+  44:main.c        ****                 PWM_WriteCompare1(i);
+ 134              		.loc 1 44 0
+ 135 0016 A0B2     		uxth	r0, r4
+ 136 0018 FFF7FEFF 		bl	PWM_WriteCompare1
+ 137              	.LVL13:
+ 138 001c 02E0     		b	.L13
+ 139              	.L12:
+  45:main.c        ****             } else {
+  46:main.c        ****                 PWM_WriteCompare2(i);
+ 140              		.loc 1 46 0
+ 141 001e A0B2     		uxth	r0, r4
+ 142 0020 FFF7FEFF 		bl	PWM_WriteCompare2
+ 143              	.LVL14:
+ 144              	.L13:
+  47:main.c        ****             }
+  48:main.c        ****             CyDelay(4);
+ 145              		.loc 1 48 0 discriminator 2
+ 146 0024 0420     		movs	r0, #4
+ 147 0026 FFF7FEFF 		bl	CyDelay
+ 148              	.LVL15:
+  42:main.c        ****             if (pwm == pwm_1) {
+ 149              		.loc 1 42 0 discriminator 2
+ 150 002a 1434     		adds	r4, r4, #20
+ 151              	.LVL16:
+ 152              	.L10:
+  42:main.c        ****             if (pwm == pwm_1) {
+ 153              		.loc 1 42 0 is_stmt 0 discriminator 1
+ 154 002c AC42     		cmp	r4, r5
+ 155 002e F0DD     		ble	.L14
+ 156 0030 11E0     		b	.L15
+ 157              	.LVL17:
+ 158              	.L20:
+ 159              	.LBE2:
+  49:main.c        ****         }
+  50:main.c        ****     } else if (compare - previous_compare < 0) {
+ 160              		.loc 1 50 0 is_stmt 1
+ 161 0032 002B     		cmp	r3, #0
+ 162 0034 0FDA     		bge	.L15
+ 163 0036 0CE0     		b	.L16
+ 164              	.LVL18:
+ 165              	.L19:
+ 166              	.LBB3:
+  51:main.c        ****         for (int i = previous_compare; i >= compare; i -= 20) {
+  52:main.c        ****             if (pwm == pwm_1) {
+ 167              		.loc 1 52 0
+ 168 0038 012E     		cmp	r6, #1
+ 169 003a 03D1     		bne	.L17
+  53:main.c        ****                 PWM_WriteCompare1(i);
+ 170              		.loc 1 53 0
+ 171 003c A0B2     		uxth	r0, r4
+ 172 003e FFF7FEFF 		bl	PWM_WriteCompare1
+ 173              	.LVL19:
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 5
+
+
+ 174 0042 02E0     		b	.L18
+ 175              	.L17:
+  54:main.c        ****             } else {
+  55:main.c        ****                 PWM_WriteCompare2(i);
+ 176              		.loc 1 55 0
+ 177 0044 A0B2     		uxth	r0, r4
+ 178 0046 FFF7FEFF 		bl	PWM_WriteCompare2
+ 179              	.LVL20:
+ 180              	.L18:
+  56:main.c        ****             }
+  57:main.c        ****             CyDelay(4);  
+ 181              		.loc 1 57 0 discriminator 2
+ 182 004a 0420     		movs	r0, #4
+ 183 004c FFF7FEFF 		bl	CyDelay
+ 184              	.LVL21:
+  51:main.c        ****             if (pwm == pwm_1) {
+ 185              		.loc 1 51 0 discriminator 2
+ 186 0050 143C     		subs	r4, r4, #20
+ 187              	.LVL22:
+ 188              	.L16:
+  51:main.c        ****             if (pwm == pwm_1) {
+ 189              		.loc 1 51 0 is_stmt 0 discriminator 1
+ 190 0052 AC42     		cmp	r4, r5
+ 191 0054 F0DA     		bge	.L19
+ 192              	.LVL23:
+ 193              	.L15:
+ 194              	.LBE3:
+  58:main.c        ****         }
+  59:main.c        ****     }
+  60:main.c        ****     previous_compare = compare;
+ 195              		.loc 1 60 0 is_stmt 1
+ 196 0056 034B     		ldr	r3, .L22
+ 197 0058 1D60     		str	r5, [r3]
+  61:main.c        ****     CyDelay(1000);
+ 198              		.loc 1 61 0
+ 199 005a 4FF47A70 		mov	r0, #1000
+ 200 005e FFF7FEFF 		bl	CyDelay
+ 201              	.LVL24:
+ 202 0062 70BD     		pop	{r4, r5, r6, pc}
+ 203              	.LVL25:
+ 204              	.L23:
+ 205              		.align	2
+ 206              	.L22:
+ 207 0064 00000000 		.word	.LANCHOR0
+ 208              		.cfi_endproc
+ 209              	.LFE66:
+ 210              		.size	MoveMotor, .-MoveMotor
+ 211              		.global	__aeabi_i2d
+ 212              		.global	__aeabi_d2f
+ 213              		.global	__aeabi_ddiv
+ 214              		.global	__aeabi_f2d
+ 215              		.section	.text.main,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	main
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	main, %function
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 6
+
+
+ 221              	main:
+ 222              	.LFB67:
+  62:main.c        **** }
+  63:main.c        **** 
+  64:main.c        **** int main(void) {
+ 223              		.loc 1 64 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 8
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 227 0000 30B5     		push	{r4, r5, lr}
+ 228              		.cfi_def_cfa_offset 12
+ 229              		.cfi_offset 4, -12
+ 230              		.cfi_offset 5, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 83B0     		sub	sp, sp, #12
+ 233              		.cfi_def_cfa_offset 24
+  65:main.c        ****     PWM_Start();
+ 234              		.loc 1 65 0
+ 235 0004 FFF7FEFF 		bl	PWM_Start
+ 236              	.LVL26:
+  66:main.c        ****     CyGlobalIntEnable;
+ 237              		.loc 1 66 0
+ 238              		.syntax unified
+ 239              	@ 66 "main.c" 1
+ 240 0008 62B6     		CPSIE   i
+ 241              	@ 0 "" 2
+  67:main.c        ****     uint8_t ReceiveD1 = UART_1_GetChar();
+ 242              		.loc 1 67 0
+ 243              		.thumb
+ 244              		.syntax unified
+ 245 000a FFF7FEFF 		bl	UART_1_GetChar
+ 246              	.LVL27:
+ 247 000e 0446     		mov	r4, r0
+ 248              	.LVL28:
+  68:main.c        ****             while (ReceiveD1 == 0)
+ 249              		.loc 1 68 0
+ 250 0010 03E0     		b	.L25
+ 251              	.L27:
+  69:main.c        ****             {
+  70:main.c        ****                 ReceiveD1 = UART_1_GetChar();
+ 252              		.loc 1 70 0
+ 253 0012 FFF7FEFF 		bl	UART_1_GetChar
+ 254              	.LVL29:
+  71:main.c        ****                 if(ReceiveD1 != 0)
+ 255              		.loc 1 71 0
+ 256 0016 0446     		mov	r4, r0
+ 257 0018 08B9     		cbnz	r0, .L26
+ 258              	.LVL30:
+ 259              	.L25:
+  68:main.c        ****             while (ReceiveD1 == 0)
+ 260              		.loc 1 68 0
+ 261 001a 002C     		cmp	r4, #0
+ 262 001c F9D0     		beq	.L27
+ 263              	.LVL31:
+ 264              	.L26:
+  72:main.c        ****                     break;
+  73:main.c        ****             }
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 7
+
+
+  74:main.c        ****             CyDelay(1000);
+ 265              		.loc 1 74 0
+ 266 001e 4FF47A70 		mov	r0, #1000
+ 267 0022 FFF7FEFF 		bl	CyDelay
+ 268              	.LVL32:
+  75:main.c        ****             int ReceiveD2;
+  76:main.c        ****             LCD_Char_1_ClearDisplay();
+ 269              		.loc 1 76 0
+ 270 0026 0120     		movs	r0, #1
+ 271 0028 FFF7FEFF 		bl	LCD_Char_1_WriteControl
+ 272              	.LVL33:
+  77:main.c        ****             
+  78:main.c        ****             while (ReceiveD2 == 0)
+ 273              		.loc 1 78 0
+ 274 002c 03E0     		b	.L28
+ 275              	.LVL34:
+ 276              	.L30:
+  79:main.c        ****             {
+  80:main.c        ****                 ReceiveD2 = UART_1_GetChar();
+ 277              		.loc 1 80 0
+ 278 002e FFF7FEFF 		bl	UART_1_GetChar
+ 279              	.LVL35:
+ 280 0032 0546     		mov	r5, r0
+ 281              	.LVL36:
+  81:main.c        ****                 if (ReceiveD2 != 0)
+ 282              		.loc 1 81 0
+ 283 0034 08B9     		cbnz	r0, .L29
+ 284              	.LVL37:
+ 285              	.L28:
+  78:main.c        ****             {
+ 286              		.loc 1 78 0
+ 287 0036 002D     		cmp	r5, #0
+ 288 0038 F9D0     		beq	.L30
+ 289              	.L29:
+  82:main.c        ****                     break;
+  83:main.c        ****             }
+  84:main.c        ****     
+  85:main.c        ****             CyDelay(2000);
+ 290              		.loc 1 85 0
+ 291 003a 4FF4FA60 		mov	r0, #2000
+ 292 003e FFF7FEFF 		bl	CyDelay
+ 293              	.LVL38:
+  86:main.c        ****             float ReceiveD1D = ReceiveD1 * 1.0;
+ 294              		.loc 1 86 0
+ 295 0042 2046     		mov	r0, r4
+ 296 0044 FFF7FEFF 		bl	__aeabi_i2d
+ 297              	.LVL39:
+ 298 0048 FFF7FEFF 		bl	__aeabi_d2f
+ 299              	.LVL40:
+ 300 004c 0446     		mov	r4, r0
+ 301              	.LVL41:
+  87:main.c        ****             float DecReceived = ReceiveD2 / 100.00;
+ 302              		.loc 1 87 0
+ 303 004e 2846     		mov	r0, r5
+ 304              	.LVL42:
+ 305 0050 FFF7FEFF 		bl	__aeabi_i2d
+ 306              	.LVL43:
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 8
+
+
+ 307 0054 0022     		movs	r2, #0
+ 308 0056 3E4B     		ldr	r3, .L38
+ 309 0058 FFF7FEFF 		bl	__aeabi_ddiv
+ 310              	.LVL44:
+ 311 005c FFF7FEFF 		bl	__aeabi_d2f
+ 312              	.LVL45:
+  88:main.c        ****             float Received = ReceiveD1D + DecReceived;
+ 313              		.loc 1 88 0
+ 314 0060 0146     		mov	r1, r0
+ 315 0062 2046     		mov	r0, r4
+ 316              	.LVL46:
+ 317 0064 FFF7FEFF 		bl	__aeabi_fadd
+ 318              	.LVL47:
+  89:main.c        ****         
+  90:main.c        ****             char8 str[8];
+  91:main.c        ****             sprintf(str, "%.2f", Received);
+ 319              		.loc 1 91 0
+ 320 0068 FFF7FEFF 		bl	__aeabi_f2d
+ 321              	.LVL48:
+ 322 006c 0246     		mov	r2, r0
+ 323 006e 0B46     		mov	r3, r1
+ 324 0070 3849     		ldr	r1, .L38+4
+ 325 0072 6846     		mov	r0, sp
+ 326 0074 FFF7FEFF 		bl	sprintf
+ 327              	.LVL49:
+  92:main.c        ****         
+  93:main.c        ****             LCD_Char_1_ClearDisplay();
+ 328              		.loc 1 93 0
+ 329 0078 0120     		movs	r0, #1
+ 330 007a FFF7FEFF 		bl	LCD_Char_1_WriteControl
+ 331              	.LVL50:
+  94:main.c        ****             CyDelay(20);
+ 332              		.loc 1 94 0
+ 333 007e 1420     		movs	r0, #20
+ 334 0080 FFF7FEFF 		bl	CyDelay
+ 335              	.LVL51:
+  95:main.c        ****             LCD_Char_1_Position(0,0);
+ 336              		.loc 1 95 0
+ 337 0084 0021     		movs	r1, #0
+ 338 0086 0846     		mov	r0, r1
+ 339 0088 FFF7FEFF 		bl	LCD_Char_1_Position
+ 340              	.LVL52:
+  96:main.c        ****             LCD_Char_1_PrintString("Recieved Theta1");
+ 341              		.loc 1 96 0
+ 342 008c 3248     		ldr	r0, .L38+8
+ 343 008e FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 344              	.LVL53:
+  97:main.c        ****             
+  98:main.c        ****             float Theta1 = Received;
+  99:main.c        ****             
+ 100:main.c        ****             LCD_Char_1_ClearDisplay();
+ 345              		.loc 1 100 0
+ 346 0092 0120     		movs	r0, #1
+ 347 0094 FFF7FEFF 		bl	LCD_Char_1_WriteControl
+ 348              	.LVL54:
+ 101:main.c        ****             LCD_Char_1_Position(0, 0);
+ 349              		.loc 1 101 0
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 9
+
+
+ 350 0098 0021     		movs	r1, #0
+ 351 009a 0846     		mov	r0, r1
+ 352 009c FFF7FEFF 		bl	LCD_Char_1_Position
+ 353              	.LVL55:
+ 102:main.c        ****             LCD_Char_1_PrintString("Waiting");
+ 354              		.loc 1 102 0
+ 355 00a0 2E48     		ldr	r0, .L38+12
+ 356 00a2 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 357              	.LVL56:
+ 103:main.c        ****             int ReceiveD12;
+ 104:main.c        ****             ReceiveD12 = UART_1_GetChar();
+ 358              		.loc 1 104 0
+ 359 00a6 FFF7FEFF 		bl	UART_1_GetChar
+ 360              	.LVL57:
+ 361 00aa 0546     		mov	r5, r0
+ 362              	.LVL58:
+ 105:main.c        ****             while (ReceiveD12 == 0)
+ 363              		.loc 1 105 0
+ 364 00ac 03E0     		b	.L31
+ 365              	.LVL59:
+ 366              	.L33:
+ 106:main.c        ****             {
+ 107:main.c        ****                 ReceiveD12 = UART_1_GetChar();
+ 367              		.loc 1 107 0
+ 368 00ae FFF7FEFF 		bl	UART_1_GetChar
+ 369              	.LVL60:
+ 370 00b2 0546     		mov	r5, r0
+ 371              	.LVL61:
+ 108:main.c        ****                 if(ReceiveD12 != 0)
+ 372              		.loc 1 108 0
+ 373 00b4 08B9     		cbnz	r0, .L32
+ 374              	.LVL62:
+ 375              	.L31:
+ 105:main.c        ****             while (ReceiveD12 == 0)
+ 376              		.loc 1 105 0
+ 377 00b6 002D     		cmp	r5, #0
+ 378 00b8 F9D0     		beq	.L33
+ 379              	.L32:
+ 109:main.c        ****                     break;
+ 110:main.c        ****             }
+ 111:main.c        ****             CyDelay(1000);
+ 380              		.loc 1 111 0
+ 381 00ba 4FF47A70 		mov	r0, #1000
+ 382 00be FFF7FEFF 		bl	CyDelay
+ 383              	.LVL63:
+ 112:main.c        ****             int ReceiveD22;
+ 113:main.c        ****             ReceiveD22 = UART_1_GetChar();
+ 384              		.loc 1 113 0
+ 385 00c2 FFF7FEFF 		bl	UART_1_GetChar
+ 386              	.LVL64:
+ 387 00c6 0446     		mov	r4, r0
+ 388              	.LVL65:
+ 114:main.c        ****             while (ReceiveD22 == 0)
+ 389              		.loc 1 114 0
+ 390 00c8 03E0     		b	.L34
+ 391              	.LVL66:
+ 392              	.L36:
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 10
+
+
+ 115:main.c        ****             {
+ 116:main.c        ****                 ReceiveD22 = UART_1_GetChar();
+ 393              		.loc 1 116 0
+ 394 00ca FFF7FEFF 		bl	UART_1_GetChar
+ 395              	.LVL67:
+ 396 00ce 0446     		mov	r4, r0
+ 397              	.LVL68:
+ 117:main.c        ****                 if (ReceiveD22 != 0)
+ 398              		.loc 1 117 0
+ 399 00d0 08B9     		cbnz	r0, .L35
+ 400              	.LVL69:
+ 401              	.L34:
+ 114:main.c        ****             while (ReceiveD22 == 0)
+ 402              		.loc 1 114 0
+ 403 00d2 002C     		cmp	r4, #0
+ 404 00d4 F9D0     		beq	.L36
+ 405              	.L35:
+ 118:main.c        ****                     break;
+ 119:main.c        ****             }
+ 120:main.c        ****     
+ 121:main.c        ****             CyDelay(2000);
+ 406              		.loc 1 121 0
+ 407 00d6 4FF4FA60 		mov	r0, #2000
+ 408 00da FFF7FEFF 		bl	CyDelay
+ 409              	.LVL70:
+ 122:main.c        ****             float ReceiveD1D22 = ReceiveD12 * 1.0;
+ 410              		.loc 1 122 0
+ 411 00de 2846     		mov	r0, r5
+ 412 00e0 FFF7FEFF 		bl	__aeabi_i2d
+ 413              	.LVL71:
+ 414 00e4 FFF7FEFF 		bl	__aeabi_d2f
+ 415              	.LVL72:
+ 416 00e8 0546     		mov	r5, r0
+ 417              	.LVL73:
+ 123:main.c        ****             float DecReceived22 = ReceiveD22 / 100.00;
+ 418              		.loc 1 123 0
+ 419 00ea 2046     		mov	r0, r4
+ 420              	.LVL74:
+ 421 00ec FFF7FEFF 		bl	__aeabi_i2d
+ 422              	.LVL75:
+ 423 00f0 0022     		movs	r2, #0
+ 424 00f2 174B     		ldr	r3, .L38
+ 425 00f4 FFF7FEFF 		bl	__aeabi_ddiv
+ 426              	.LVL76:
+ 427 00f8 FFF7FEFF 		bl	__aeabi_d2f
+ 428              	.LVL77:
+ 124:main.c        ****             float Received2 = ReceiveD1D22 + DecReceived22;
+ 429              		.loc 1 124 0
+ 430 00fc 0146     		mov	r1, r0
+ 431 00fe 2846     		mov	r0, r5
+ 432              	.LVL78:
+ 433 0100 FFF7FEFF 		bl	__aeabi_fadd
+ 434              	.LVL79:
+ 125:main.c        ****         
+ 126:main.c        ****             sprintf(str, "%.2f", Received2);
+ 435              		.loc 1 126 0
+ 436 0104 FFF7FEFF 		bl	__aeabi_f2d
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 11
+
+
+ 437              	.LVL80:
+ 438 0108 0246     		mov	r2, r0
+ 439 010a 0B46     		mov	r3, r1
+ 440 010c 1149     		ldr	r1, .L38+4
+ 441 010e 6846     		mov	r0, sp
+ 442 0110 FFF7FEFF 		bl	sprintf
+ 443              	.LVL81:
+ 127:main.c        ****         
+ 128:main.c        ****             LCD_Char_1_ClearDisplay();
+ 444              		.loc 1 128 0
+ 445 0114 0120     		movs	r0, #1
+ 446 0116 FFF7FEFF 		bl	LCD_Char_1_WriteControl
+ 447              	.LVL82:
+ 129:main.c        ****             CyDelay(20);
+ 448              		.loc 1 129 0
+ 449 011a 1420     		movs	r0, #20
+ 450 011c FFF7FEFF 		bl	CyDelay
+ 451              	.LVL83:
+ 130:main.c        ****             LCD_Char_1_Position(0,0);
+ 452              		.loc 1 130 0
+ 453 0120 0021     		movs	r1, #0
+ 454 0122 0846     		mov	r0, r1
+ 455 0124 FFF7FEFF 		bl	LCD_Char_1_Position
+ 456              	.LVL84:
+ 131:main.c        ****             LCD_Char_1_PrintString("Recieved Theta2");
+ 457              		.loc 1 131 0
+ 458 0128 0D48     		ldr	r0, .L38+16
+ 459 012a FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 460              	.LVL85:
+ 132:main.c        ****        
+ 133:main.c        ****             
+ 134:main.c        ****             float Theta2 = Received2 - 100;
+ 135:main.c        ****             
+ 136:main.c        ****             MoveMotor(BaseMotor_Theta(0),pwm_1);
+ 461              		.loc 1 136 0
+ 462 012e 0024     		movs	r4, #0
+ 463              	.LVL86:
+ 464 0130 2046     		mov	r0, r4
+ 465 0132 FFF7FEFF 		bl	BaseMotor_Theta
+ 466              	.LVL87:
+ 467 0136 0121     		movs	r1, #1
+ 468 0138 FFF7FEFF 		bl	MoveMotor
+ 469              	.LVL88:
+ 137:main.c        ****             MoveMotor(TopMotor_Theta(0),pwm_2);
+ 470              		.loc 1 137 0
+ 471 013c 2046     		mov	r0, r4
+ 472 013e FFF7FEFF 		bl	TopMotor_Theta
+ 473              	.LVL89:
+ 474 0142 0221     		movs	r1, #2
+ 475 0144 FFF7FEFF 		bl	MoveMotor
+ 476              	.LVL90:
+ 138:main.c        **** }
+ 477              		.loc 1 138 0
+ 478 0148 0020     		movs	r0, #0
+ 479 014a 03B0     		add	sp, sp, #12
+ 480              		.cfi_def_cfa_offset 12
+ 481              		@ sp needed
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 12
+
+
+ 482 014c 30BD     		pop	{r4, r5, pc}
+ 483              	.LVL91:
+ 484              	.L39:
+ 485 014e 00BF     		.align	2
+ 486              	.L38:
+ 487 0150 00005940 		.word	1079574528
+ 488 0154 00000000 		.word	.LC0
+ 489 0158 08000000 		.word	.LC1
+ 490 015c 18000000 		.word	.LC2
+ 491 0160 20000000 		.word	.LC3
+ 492              		.cfi_endproc
+ 493              	.LFE67:
+ 494              		.size	main, .-main
+ 495              		.global	a4
+ 496              		.global	a2
+ 497              		.global	flag
+ 498              		.global	previous_compare
+ 499              		.data
+ 500              		.align	2
+ 501              		.type	a4, %object
+ 502              		.size	a4, 4
+ 503              	a4:
+ 504 0000 00006040 		.word	1080033280
+ 505              		.type	a2, %object
+ 506              		.size	a2, 4
+ 507              	a2:
+ 508 0004 6666C640 		.word	1086744166
+ 509              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 510              		.align	2
+ 511              	.LC0:
+ 512 0000 252E3266 		.ascii	"%.2f\000"
+ 512      00
+ 513 0005 000000   		.space	3
+ 514              	.LC1:
+ 515 0008 52656369 		.ascii	"Recieved Theta1\000"
+ 515      65766564 
+ 515      20546865 
+ 515      74613100 
+ 516              	.LC2:
+ 517 0018 57616974 		.ascii	"Waiting\000"
+ 517      696E6700 
+ 518              	.LC3:
+ 519 0020 52656369 		.ascii	"Recieved Theta2\000"
+ 519      65766564 
+ 519      20546865 
+ 519      74613200 
+ 520              		.bss
+ 521              		.align	2
+ 522              		.set	.LANCHOR0,. + 0
+ 523              		.type	previous_compare, %object
+ 524              		.size	previous_compare, 4
+ 525              	previous_compare:
+ 526 0000 00000000 		.space	4
+ 527              		.type	flag, %object
+ 528              		.size	flag, 4
+ 529              	flag:
+ 530 0004 00000000 		.space	4
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 13
+
+
+ 531              		.text
+ 532              	.Letext0:
+ 533              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 534              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 535              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 536              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 537              		.file 6 "Generated_Source\\PSoC5/PWM.h"
+ 538              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 539              		.file 8 "Generated_Source\\PSoC5/UART_1.h"
+ 540              		.file 9 "Generated_Source\\PSoC5/LCD_Char_1.h"
+ 541              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 542              		.section	.debug_info,"",%progbits
+ 543              	.Ldebug_info0:
+ 544 0000 5C060000 		.4byte	0x65c
+ 545 0004 0400     		.2byte	0x4
+ 546 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 547 000a 04       		.byte	0x4
+ 548 000b 01       		.uleb128 0x1
+ 549 000c 7B020000 		.4byte	.LASF55
+ 550 0010 0C       		.byte	0xc
+ 551 0011 D8010000 		.4byte	.LASF56
+ 552 0015 11030000 		.4byte	.LASF57
+ 553 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 554 001d 00000000 		.4byte	0
+ 555 0021 00000000 		.4byte	.Ldebug_line0
+ 556 0025 02       		.uleb128 0x2
+ 557 0026 04       		.byte	0x4
+ 558 0027 04       		.byte	0x4
+ 559 0028 84000000 		.4byte	.LASF0
+ 560 002c 02       		.uleb128 0x2
+ 561 002d 01       		.byte	0x1
+ 562 002e 06       		.byte	0x6
+ 563 002f 78000000 		.4byte	.LASF1
+ 564 0033 03       		.uleb128 0x3
+ 565 0034 F0000000 		.4byte	.LASF5
+ 566 0038 02       		.byte	0x2
+ 567 0039 1D       		.byte	0x1d
+ 568 003a 3E000000 		.4byte	0x3e
+ 569 003e 02       		.uleb128 0x2
+ 570 003f 01       		.byte	0x1
+ 571 0040 08       		.byte	0x8
+ 572 0041 17010000 		.4byte	.LASF2
+ 573 0045 02       		.uleb128 0x2
+ 574 0046 02       		.byte	0x2
+ 575 0047 05       		.byte	0x5
+ 576 0048 66000000 		.4byte	.LASF3
+ 577 004c 02       		.uleb128 0x2
+ 578 004d 02       		.byte	0x2
+ 579 004e 07       		.byte	0x7
+ 580 004f 7D010000 		.4byte	.LASF4
+ 581 0053 03       		.uleb128 0x3
+ 582 0054 17020000 		.4byte	.LASF6
+ 583 0058 02       		.byte	0x2
+ 584 0059 3F       		.byte	0x3f
+ 585 005a 5E000000 		.4byte	0x5e
+ 586 005e 02       		.uleb128 0x2
+ 587 005f 04       		.byte	0x4
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 14
+
+
+ 588 0060 05       		.byte	0x5
+ 589 0061 D9000000 		.4byte	.LASF7
+ 590 0065 02       		.uleb128 0x2
+ 591 0066 04       		.byte	0x4
+ 592 0067 07       		.byte	0x7
+ 593 0068 DF010000 		.4byte	.LASF8
+ 594 006c 02       		.uleb128 0x2
+ 595 006d 08       		.byte	0x8
+ 596 006e 05       		.byte	0x5
+ 597 006f 93000000 		.4byte	.LASF9
+ 598 0073 02       		.uleb128 0x2
+ 599 0074 08       		.byte	0x8
+ 600 0075 07       		.byte	0x7
+ 601 0076 4B010000 		.4byte	.LASF10
+ 602 007a 04       		.uleb128 0x4
+ 603 007b 04       		.byte	0x4
+ 604 007c 05       		.byte	0x5
+ 605 007d 696E7400 		.ascii	"int\000"
+ 606 0081 02       		.uleb128 0x2
+ 607 0082 04       		.byte	0x4
+ 608 0083 07       		.byte	0x7
+ 609 0084 62010000 		.4byte	.LASF11
+ 610 0088 03       		.uleb128 0x3
+ 611 0089 70000000 		.4byte	.LASF12
+ 612 008d 03       		.byte	0x3
+ 613 008e 18       		.byte	0x18
+ 614 008f 33000000 		.4byte	0x33
+ 615 0093 03       		.uleb128 0x3
+ 616 0094 BF010000 		.4byte	.LASF13
+ 617 0098 03       		.byte	0x3
+ 618 0099 2C       		.byte	0x2c
+ 619 009a 53000000 		.4byte	0x53
+ 620 009e 02       		.uleb128 0x2
+ 621 009f 08       		.byte	0x8
+ 622 00a0 04       		.byte	0x4
+ 623 00a1 1E000000 		.4byte	.LASF14
+ 624 00a5 05       		.uleb128 0x5
+ 625 00a6 C7010000 		.4byte	.LASF15
+ 626 00aa 04       		.byte	0x4
+ 627 00ab F901     		.2byte	0x1f9
+ 628 00ad B1000000 		.4byte	0xb1
+ 629 00b1 02       		.uleb128 0x2
+ 630 00b2 01       		.byte	0x1
+ 631 00b3 08       		.byte	0x8
+ 632 00b4 99010000 		.4byte	.LASF16
+ 633 00b8 02       		.uleb128 0x2
+ 634 00b9 08       		.byte	0x8
+ 635 00ba 04       		.byte	0x4
+ 636 00bb FA000000 		.4byte	.LASF17
+ 637 00bf 02       		.uleb128 0x2
+ 638 00c0 04       		.byte	0x4
+ 639 00c1 07       		.byte	0x7
+ 640 00c2 31000000 		.4byte	.LASF18
+ 641 00c6 06       		.uleb128 0x6
+ 642 00c7 01       		.byte	0x1
+ 643 00c8 3E000000 		.4byte	0x3e
+ 644 00cc 01       		.byte	0x1
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 15
+
+
+ 645 00cd 0D       		.byte	0xd
+ 646 00ce DF000000 		.4byte	0xdf
+ 647 00d2 07       		.uleb128 0x7
+ 648 00d3 25000000 		.4byte	.LASF19
+ 649 00d7 01       		.byte	0x1
+ 650 00d8 07       		.uleb128 0x7
+ 651 00d9 2B000000 		.4byte	.LASF20
+ 652 00dd 02       		.byte	0x2
+ 653 00de 00       		.byte	0
+ 654 00df 03       		.uleb128 0x3
+ 655 00e0 53000000 		.4byte	.LASF21
+ 656 00e4 01       		.byte	0x1
+ 657 00e5 10       		.byte	0x10
+ 658 00e6 C6000000 		.4byte	0xc6
+ 659 00ea 08       		.uleb128 0x8
+ 660 00eb 2D020000 		.4byte	.LASF27
+ 661 00ef 01       		.byte	0x1
+ 662 00f0 12       		.byte	0x12
+ 663 00f1 7A000000 		.4byte	0x7a
+ 664 00f5 00000000 		.4byte	.LFB64
+ 665 00f9 1C000000 		.4byte	.LFE64-.LFB64
+ 666 00fd 01       		.uleb128 0x1
+ 667 00fe 9C       		.byte	0x9c
+ 668 00ff 52010000 		.4byte	0x152
+ 669 0103 09       		.uleb128 0x9
+ 670 0104 45010000 		.4byte	.LASF29
+ 671 0108 01       		.byte	0x1
+ 672 0109 12       		.byte	0x12
+ 673 010a 25000000 		.4byte	0x25
+ 674 010e 00000000 		.4byte	.LLST0
+ 675 0112 0A       		.uleb128 0xa
+ 676 0113 0F020000 		.4byte	.LASF22
+ 677 0117 01       		.byte	0x1
+ 678 0118 13       		.byte	0x13
+ 679 0119 7A000000 		.4byte	0x7a
+ 680 011d 01       		.uleb128 0x1
+ 681 011e 50       		.byte	0x50
+ 682 011f 0B       		.uleb128 0xb
+ 683 0120 45000000 		.4byte	.LASF23
+ 684 0124 01       		.byte	0x1
+ 685 0125 14       		.byte	0x14
+ 686 0126 7A000000 		.4byte	0x7a
+ 687 012a 7805     		.2byte	0x578
+ 688 012c 0B       		.uleb128 0xb
+ 689 012d 90010000 		.4byte	.LASF24
+ 690 0131 01       		.byte	0x1
+ 691 0132 15       		.byte	0x15
+ 692 0133 7A000000 		.4byte	0x7a
+ 693 0137 201C     		.2byte	0x1c20
+ 694 0139 0C       		.uleb128 0xc
+ 695 013a 5C000000 		.4byte	.LASF25
+ 696 013e 01       		.byte	0x1
+ 697 013f 16       		.byte	0x16
+ 698 0140 7A000000 		.4byte	0x7a
+ 699 0144 00       		.byte	0
+ 700 0145 0C       		.uleb128 0xc
+ 701 0146 B5010000 		.4byte	.LASF26
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 16
+
+
+ 702 014a 01       		.byte	0x1
+ 703 014b 17       		.byte	0x17
+ 704 014c 7A000000 		.4byte	0x7a
+ 705 0150 B4       		.byte	0xb4
+ 706 0151 00       		.byte	0
+ 707 0152 08       		.uleb128 0x8
+ 708 0153 00000000 		.4byte	.LASF28
+ 709 0157 01       		.byte	0x1
+ 710 0158 1D       		.byte	0x1d
+ 711 0159 7A000000 		.4byte	0x7a
+ 712 015d 00000000 		.4byte	.LFB65
+ 713 0161 28000000 		.4byte	.LFE65-.LFB65
+ 714 0165 01       		.uleb128 0x1
+ 715 0166 9C       		.byte	0x9c
+ 716 0167 BB010000 		.4byte	0x1bb
+ 717 016b 09       		.uleb128 0x9
+ 718 016c 45010000 		.4byte	.LASF29
+ 719 0170 01       		.byte	0x1
+ 720 0171 1D       		.byte	0x1d
+ 721 0172 25000000 		.4byte	0x25
+ 722 0176 23000000 		.4byte	.LLST1
+ 723 017a 0A       		.uleb128 0xa
+ 724 017b 0F020000 		.4byte	.LASF22
+ 725 017f 01       		.byte	0x1
+ 726 0180 1E       		.byte	0x1e
+ 727 0181 7A000000 		.4byte	0x7a
+ 728 0185 01       		.uleb128 0x1
+ 729 0186 50       		.byte	0x50
+ 730 0187 0B       		.uleb128 0xb
+ 731 0188 45000000 		.4byte	.LASF23
+ 732 018c 01       		.byte	0x1
+ 733 018d 1F       		.byte	0x1f
+ 734 018e 7A000000 		.4byte	0x7a
+ 735 0192 7805     		.2byte	0x578
+ 736 0194 0B       		.uleb128 0xb
+ 737 0195 90010000 		.4byte	.LASF24
+ 738 0199 01       		.byte	0x1
+ 739 019a 20       		.byte	0x20
+ 740 019b 7A000000 		.4byte	0x7a
+ 741 019f BC1B     		.2byte	0x1bbc
+ 742 01a1 0D       		.uleb128 0xd
+ 743 01a2 5C000000 		.4byte	.LASF25
+ 744 01a6 01       		.byte	0x1
+ 745 01a7 21       		.byte	0x21
+ 746 01a8 7A000000 		.4byte	0x7a
+ 747 01ac A67F     		.sleb128 -90
+ 748 01ae 0C       		.uleb128 0xc
+ 749 01af B5010000 		.4byte	.LASF26
+ 750 01b3 01       		.byte	0x1
+ 751 01b4 22       		.byte	0x22
+ 752 01b5 7A000000 		.4byte	0x7a
+ 753 01b9 5A       		.byte	0x5a
+ 754 01ba 00       		.byte	0
+ 755 01bb 0E       		.uleb128 0xe
+ 756 01bc 05020000 		.4byte	.LASF58
+ 757 01c0 01       		.byte	0x1
+ 758 01c1 28       		.byte	0x28
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 17
+
+
+ 759 01c2 00000000 		.4byte	.LFB66
+ 760 01c6 68000000 		.4byte	.LFE66-.LFB66
+ 761 01ca 01       		.uleb128 0x1
+ 762 01cb 9C       		.byte	0x9c
+ 763 01cc A4020000 		.4byte	0x2a4
+ 764 01d0 09       		.uleb128 0x9
+ 765 01d1 0F020000 		.4byte	.LASF22
+ 766 01d5 01       		.byte	0x1
+ 767 01d6 28       		.byte	0x28
+ 768 01d7 7A000000 		.4byte	0x7a
+ 769 01db 46000000 		.4byte	.LLST2
+ 770 01df 0F       		.uleb128 0xf
+ 771 01e0 70776D00 		.ascii	"pwm\000"
+ 772 01e4 01       		.byte	0x1
+ 773 01e5 28       		.byte	0x28
+ 774 01e6 DF000000 		.4byte	0xdf
+ 775 01ea 88000000 		.4byte	.LLST3
+ 776 01ee 10       		.uleb128 0x10
+ 777 01ef 12000000 		.4byte	.LBB2
+ 778 01f3 20000000 		.4byte	.LBE2-.LBB2
+ 779 01f7 40020000 		.4byte	0x240
+ 780 01fb 11       		.uleb128 0x11
+ 781 01fc 6900     		.ascii	"i\000"
+ 782 01fe 01       		.byte	0x1
+ 783 01ff 2A       		.byte	0x2a
+ 784 0200 7A000000 		.4byte	0x7a
+ 785 0204 C2000000 		.4byte	.LLST4
+ 786 0208 12       		.uleb128 0x12
+ 787 0209 1C000000 		.4byte	.LVL13
+ 788 020d FC050000 		.4byte	0x5fc
+ 789 0211 1C020000 		.4byte	0x21c
+ 790 0215 13       		.uleb128 0x13
+ 791 0216 01       		.uleb128 0x1
+ 792 0217 50       		.byte	0x50
+ 793 0218 02       		.uleb128 0x2
+ 794 0219 74       		.byte	0x74
+ 795 021a 00       		.sleb128 0
+ 796 021b 00       		.byte	0
+ 797 021c 12       		.uleb128 0x12
+ 798 021d 24000000 		.4byte	.LVL14
+ 799 0221 07060000 		.4byte	0x607
+ 800 0225 30020000 		.4byte	0x230
+ 801 0229 13       		.uleb128 0x13
+ 802 022a 01       		.uleb128 0x1
+ 803 022b 50       		.byte	0x50
+ 804 022c 02       		.uleb128 0x2
+ 805 022d 74       		.byte	0x74
+ 806 022e 00       		.sleb128 0
+ 807 022f 00       		.byte	0
+ 808 0230 14       		.uleb128 0x14
+ 809 0231 2A000000 		.4byte	.LVL15
+ 810 0235 12060000 		.4byte	0x612
+ 811 0239 13       		.uleb128 0x13
+ 812 023a 01       		.uleb128 0x1
+ 813 023b 50       		.byte	0x50
+ 814 023c 01       		.uleb128 0x1
+ 815 023d 34       		.byte	0x34
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 18
+
+
+ 816 023e 00       		.byte	0
+ 817 023f 00       		.byte	0
+ 818 0240 10       		.uleb128 0x10
+ 819 0241 38000000 		.4byte	.LBB3
+ 820 0245 1E000000 		.4byte	.LBE3-.LBB3
+ 821 0249 92020000 		.4byte	0x292
+ 822 024d 11       		.uleb128 0x11
+ 823 024e 6900     		.ascii	"i\000"
+ 824 0250 01       		.byte	0x1
+ 825 0251 33       		.byte	0x33
+ 826 0252 7A000000 		.4byte	0x7a
+ 827 0256 D5000000 		.4byte	.LLST5
+ 828 025a 12       		.uleb128 0x12
+ 829 025b 42000000 		.4byte	.LVL19
+ 830 025f FC050000 		.4byte	0x5fc
+ 831 0263 6E020000 		.4byte	0x26e
+ 832 0267 13       		.uleb128 0x13
+ 833 0268 01       		.uleb128 0x1
+ 834 0269 50       		.byte	0x50
+ 835 026a 02       		.uleb128 0x2
+ 836 026b 74       		.byte	0x74
+ 837 026c 00       		.sleb128 0
+ 838 026d 00       		.byte	0
+ 839 026e 12       		.uleb128 0x12
+ 840 026f 4A000000 		.4byte	.LVL20
+ 841 0273 07060000 		.4byte	0x607
+ 842 0277 82020000 		.4byte	0x282
+ 843 027b 13       		.uleb128 0x13
+ 844 027c 01       		.uleb128 0x1
+ 845 027d 50       		.byte	0x50
+ 846 027e 02       		.uleb128 0x2
+ 847 027f 74       		.byte	0x74
+ 848 0280 00       		.sleb128 0
+ 849 0281 00       		.byte	0
+ 850 0282 14       		.uleb128 0x14
+ 851 0283 50000000 		.4byte	.LVL21
+ 852 0287 12060000 		.4byte	0x612
+ 853 028b 13       		.uleb128 0x13
+ 854 028c 01       		.uleb128 0x1
+ 855 028d 50       		.byte	0x50
+ 856 028e 01       		.uleb128 0x1
+ 857 028f 34       		.byte	0x34
+ 858 0290 00       		.byte	0
+ 859 0291 00       		.byte	0
+ 860 0292 14       		.uleb128 0x14
+ 861 0293 62000000 		.4byte	.LVL24
+ 862 0297 12060000 		.4byte	0x612
+ 863 029b 13       		.uleb128 0x13
+ 864 029c 01       		.uleb128 0x1
+ 865 029d 50       		.byte	0x50
+ 866 029e 03       		.uleb128 0x3
+ 867 029f 0A       		.byte	0xa
+ 868 02a0 E803     		.2byte	0x3e8
+ 869 02a2 00       		.byte	0
+ 870 02a3 00       		.byte	0
+ 871 02a4 08       		.uleb128 0x8
+ 872 02a5 4E000000 		.4byte	.LASF30
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 19
+
+
+ 873 02a9 01       		.byte	0x1
+ 874 02aa 40       		.byte	0x40
+ 875 02ab 7A000000 		.4byte	0x7a
+ 876 02af 00000000 		.4byte	.LFB67
+ 877 02b3 64010000 		.4byte	.LFE67-.LFB67
+ 878 02b7 01       		.uleb128 0x1
+ 879 02b8 9C       		.byte	0x9c
+ 880 02b9 99050000 		.4byte	0x599
+ 881 02bd 15       		.uleb128 0x15
+ 882 02be C5000000 		.4byte	.LASF31
+ 883 02c2 01       		.byte	0x1
+ 884 02c3 43       		.byte	0x43
+ 885 02c4 88000000 		.4byte	0x88
+ 886 02c8 E8000000 		.4byte	.LLST6
+ 887 02cc 15       		.uleb128 0x15
+ 888 02cd CF000000 		.4byte	.LASF32
+ 889 02d1 01       		.byte	0x1
+ 890 02d2 4B       		.byte	0x4b
+ 891 02d3 7A000000 		.4byte	0x7a
+ 892 02d7 11010000 		.4byte	.LLST7
+ 893 02db 15       		.uleb128 0x15
+ 894 02dc CD010000 		.4byte	.LASF33
+ 895 02e0 01       		.byte	0x1
+ 896 02e1 56       		.byte	0x56
+ 897 02e2 25000000 		.4byte	0x25
+ 898 02e6 3A010000 		.4byte	.LLST8
+ 899 02ea 15       		.uleb128 0x15
+ 900 02eb 21020000 		.4byte	.LASF34
+ 901 02ef 01       		.byte	0x1
+ 902 02f0 57       		.byte	0x57
+ 903 02f1 25000000 		.4byte	0x25
+ 904 02f5 58010000 		.4byte	.LLST9
+ 905 02f9 15       		.uleb128 0x15
+ 906 02fa 8A000000 		.4byte	.LASF35
+ 907 02fe 01       		.byte	0x1
+ 908 02ff 58       		.byte	0x58
+ 909 0300 25000000 		.4byte	0x25
+ 910 0304 76010000 		.4byte	.LLST10
+ 911 0308 16       		.uleb128 0x16
+ 912 0309 73747200 		.ascii	"str\000"
+ 913 030d 01       		.byte	0x1
+ 914 030e 5A       		.byte	0x5a
+ 915 030f 99050000 		.4byte	0x599
+ 916 0313 02       		.uleb128 0x2
+ 917 0314 91       		.byte	0x91
+ 918 0315 68       		.sleb128 -24
+ 919 0316 17       		.uleb128 0x17
+ 920 0317 6F010000 		.4byte	.LASF41
+ 921 031b 01       		.byte	0x1
+ 922 031c 62       		.byte	0x62
+ 923 031d 25000000 		.4byte	0x25
+ 924 0321 15       		.uleb128 0x15
+ 925 0322 47020000 		.4byte	.LASF36
+ 926 0326 01       		.byte	0x1
+ 927 0327 67       		.byte	0x67
+ 928 0328 7A000000 		.4byte	0x7a
+ 929 032c 89010000 		.4byte	.LLST11
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 20
+
+
+ 930 0330 15       		.uleb128 0x15
+ 931 0331 3A000000 		.4byte	.LASF37
+ 932 0335 01       		.byte	0x1
+ 933 0336 70       		.byte	0x70
+ 934 0337 7A000000 		.4byte	0x7a
+ 935 033b BD010000 		.4byte	.LLST12
+ 936 033f 15       		.uleb128 0x15
+ 937 0340 5C020000 		.4byte	.LASF38
+ 938 0344 01       		.byte	0x1
+ 939 0345 7A       		.byte	0x7a
+ 940 0346 25000000 		.4byte	0x25
+ 941 034a F1010000 		.4byte	.LLST13
+ 942 034e 15       		.uleb128 0x15
+ 943 034f E2000000 		.4byte	.LASF39
+ 944 0353 01       		.byte	0x1
+ 945 0354 7B       		.byte	0x7b
+ 946 0355 25000000 		.4byte	0x25
+ 947 0359 0F020000 		.4byte	.LLST14
+ 948 035d 15       		.uleb128 0x15
+ 949 035e 52020000 		.4byte	.LASF40
+ 950 0362 01       		.byte	0x1
+ 951 0363 7C       		.byte	0x7c
+ 952 0364 25000000 		.4byte	0x25
+ 953 0368 2D020000 		.4byte	.LLST15
+ 954 036c 17       		.uleb128 0x17
+ 955 036d 76010000 		.4byte	.LASF42
+ 956 0371 01       		.byte	0x1
+ 957 0372 86       		.byte	0x86
+ 958 0373 25000000 		.4byte	0x25
+ 959 0377 18       		.uleb128 0x18
+ 960 0378 08000000 		.4byte	.LVL26
+ 961 037c 1D060000 		.4byte	0x61d
+ 962 0380 18       		.uleb128 0x18
+ 963 0381 0E000000 		.4byte	.LVL27
+ 964 0385 28060000 		.4byte	0x628
+ 965 0389 18       		.uleb128 0x18
+ 966 038a 16000000 		.4byte	.LVL29
+ 967 038e 28060000 		.4byte	0x628
+ 968 0392 12       		.uleb128 0x12
+ 969 0393 26000000 		.4byte	.LVL32
+ 970 0397 12060000 		.4byte	0x612
+ 971 039b A7030000 		.4byte	0x3a7
+ 972 039f 13       		.uleb128 0x13
+ 973 03a0 01       		.uleb128 0x1
+ 974 03a1 50       		.byte	0x50
+ 975 03a2 03       		.uleb128 0x3
+ 976 03a3 0A       		.byte	0xa
+ 977 03a4 E803     		.2byte	0x3e8
+ 978 03a6 00       		.byte	0
+ 979 03a7 12       		.uleb128 0x12
+ 980 03a8 2C000000 		.4byte	.LVL33
+ 981 03ac 33060000 		.4byte	0x633
+ 982 03b0 BA030000 		.4byte	0x3ba
+ 983 03b4 13       		.uleb128 0x13
+ 984 03b5 01       		.uleb128 0x1
+ 985 03b6 50       		.byte	0x50
+ 986 03b7 01       		.uleb128 0x1
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 21
+
+
+ 987 03b8 31       		.byte	0x31
+ 988 03b9 00       		.byte	0
+ 989 03ba 18       		.uleb128 0x18
+ 990 03bb 32000000 		.4byte	.LVL35
+ 991 03bf 28060000 		.4byte	0x628
+ 992 03c3 12       		.uleb128 0x12
+ 993 03c4 42000000 		.4byte	.LVL38
+ 994 03c8 12060000 		.4byte	0x612
+ 995 03cc D8030000 		.4byte	0x3d8
+ 996 03d0 13       		.uleb128 0x13
+ 997 03d1 01       		.uleb128 0x1
+ 998 03d2 50       		.byte	0x50
+ 999 03d3 03       		.uleb128 0x3
+ 1000 03d4 0A       		.byte	0xa
+ 1001 03d5 D007     		.2byte	0x7d0
+ 1002 03d7 00       		.byte	0
+ 1003 03d8 12       		.uleb128 0x12
+ 1004 03d9 78000000 		.4byte	.LVL49
+ 1005 03dd 3E060000 		.4byte	0x63e
+ 1006 03e1 F5030000 		.4byte	0x3f5
+ 1007 03e5 13       		.uleb128 0x13
+ 1008 03e6 01       		.uleb128 0x1
+ 1009 03e7 50       		.byte	0x50
+ 1010 03e8 02       		.uleb128 0x2
+ 1011 03e9 7D       		.byte	0x7d
+ 1012 03ea 00       		.sleb128 0
+ 1013 03eb 13       		.uleb128 0x13
+ 1014 03ec 01       		.uleb128 0x1
+ 1015 03ed 51       		.byte	0x51
+ 1016 03ee 05       		.uleb128 0x5
+ 1017 03ef 03       		.byte	0x3
+ 1018 03f0 00000000 		.4byte	.LC0
+ 1019 03f4 00       		.byte	0
+ 1020 03f5 12       		.uleb128 0x12
+ 1021 03f6 7E000000 		.4byte	.LVL50
+ 1022 03fa 33060000 		.4byte	0x633
+ 1023 03fe 08040000 		.4byte	0x408
+ 1024 0402 13       		.uleb128 0x13
+ 1025 0403 01       		.uleb128 0x1
+ 1026 0404 50       		.byte	0x50
+ 1027 0405 01       		.uleb128 0x1
+ 1028 0406 31       		.byte	0x31
+ 1029 0407 00       		.byte	0
+ 1030 0408 12       		.uleb128 0x12
+ 1031 0409 84000000 		.4byte	.LVL51
+ 1032 040d 12060000 		.4byte	0x612
+ 1033 0411 1B040000 		.4byte	0x41b
+ 1034 0415 13       		.uleb128 0x13
+ 1035 0416 01       		.uleb128 0x1
+ 1036 0417 50       		.byte	0x50
+ 1037 0418 01       		.uleb128 0x1
+ 1038 0419 44       		.byte	0x44
+ 1039 041a 00       		.byte	0
+ 1040 041b 12       		.uleb128 0x12
+ 1041 041c 8C000000 		.4byte	.LVL52
+ 1042 0420 49060000 		.4byte	0x649
+ 1043 0424 33040000 		.4byte	0x433
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 22
+
+
+ 1044 0428 13       		.uleb128 0x13
+ 1045 0429 01       		.uleb128 0x1
+ 1046 042a 50       		.byte	0x50
+ 1047 042b 01       		.uleb128 0x1
+ 1048 042c 30       		.byte	0x30
+ 1049 042d 13       		.uleb128 0x13
+ 1050 042e 01       		.uleb128 0x1
+ 1051 042f 51       		.byte	0x51
+ 1052 0430 01       		.uleb128 0x1
+ 1053 0431 30       		.byte	0x30
+ 1054 0432 00       		.byte	0
+ 1055 0433 12       		.uleb128 0x12
+ 1056 0434 92000000 		.4byte	.LVL53
+ 1057 0438 54060000 		.4byte	0x654
+ 1058 043c 4A040000 		.4byte	0x44a
+ 1059 0440 13       		.uleb128 0x13
+ 1060 0441 01       		.uleb128 0x1
+ 1061 0442 50       		.byte	0x50
+ 1062 0443 05       		.uleb128 0x5
+ 1063 0444 03       		.byte	0x3
+ 1064 0445 08000000 		.4byte	.LC1
+ 1065 0449 00       		.byte	0
+ 1066 044a 12       		.uleb128 0x12
+ 1067 044b 98000000 		.4byte	.LVL54
+ 1068 044f 33060000 		.4byte	0x633
+ 1069 0453 5D040000 		.4byte	0x45d
+ 1070 0457 13       		.uleb128 0x13
+ 1071 0458 01       		.uleb128 0x1
+ 1072 0459 50       		.byte	0x50
+ 1073 045a 01       		.uleb128 0x1
+ 1074 045b 31       		.byte	0x31
+ 1075 045c 00       		.byte	0
+ 1076 045d 12       		.uleb128 0x12
+ 1077 045e A0000000 		.4byte	.LVL55
+ 1078 0462 49060000 		.4byte	0x649
+ 1079 0466 75040000 		.4byte	0x475
+ 1080 046a 13       		.uleb128 0x13
+ 1081 046b 01       		.uleb128 0x1
+ 1082 046c 50       		.byte	0x50
+ 1083 046d 01       		.uleb128 0x1
+ 1084 046e 30       		.byte	0x30
+ 1085 046f 13       		.uleb128 0x13
+ 1086 0470 01       		.uleb128 0x1
+ 1087 0471 51       		.byte	0x51
+ 1088 0472 01       		.uleb128 0x1
+ 1089 0473 30       		.byte	0x30
+ 1090 0474 00       		.byte	0
+ 1091 0475 12       		.uleb128 0x12
+ 1092 0476 A6000000 		.4byte	.LVL56
+ 1093 047a 54060000 		.4byte	0x654
+ 1094 047e 8C040000 		.4byte	0x48c
+ 1095 0482 13       		.uleb128 0x13
+ 1096 0483 01       		.uleb128 0x1
+ 1097 0484 50       		.byte	0x50
+ 1098 0485 05       		.uleb128 0x5
+ 1099 0486 03       		.byte	0x3
+ 1100 0487 18000000 		.4byte	.LC2
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 23
+
+
+ 1101 048b 00       		.byte	0
+ 1102 048c 18       		.uleb128 0x18
+ 1103 048d AA000000 		.4byte	.LVL57
+ 1104 0491 28060000 		.4byte	0x628
+ 1105 0495 18       		.uleb128 0x18
+ 1106 0496 B2000000 		.4byte	.LVL60
+ 1107 049a 28060000 		.4byte	0x628
+ 1108 049e 12       		.uleb128 0x12
+ 1109 049f C2000000 		.4byte	.LVL63
+ 1110 04a3 12060000 		.4byte	0x612
+ 1111 04a7 B3040000 		.4byte	0x4b3
+ 1112 04ab 13       		.uleb128 0x13
+ 1113 04ac 01       		.uleb128 0x1
+ 1114 04ad 50       		.byte	0x50
+ 1115 04ae 03       		.uleb128 0x3
+ 1116 04af 0A       		.byte	0xa
+ 1117 04b0 E803     		.2byte	0x3e8
+ 1118 04b2 00       		.byte	0
+ 1119 04b3 18       		.uleb128 0x18
+ 1120 04b4 C6000000 		.4byte	.LVL64
+ 1121 04b8 28060000 		.4byte	0x628
+ 1122 04bc 18       		.uleb128 0x18
+ 1123 04bd CE000000 		.4byte	.LVL67
+ 1124 04c1 28060000 		.4byte	0x628
+ 1125 04c5 12       		.uleb128 0x12
+ 1126 04c6 DE000000 		.4byte	.LVL70
+ 1127 04ca 12060000 		.4byte	0x612
+ 1128 04ce DA040000 		.4byte	0x4da
+ 1129 04d2 13       		.uleb128 0x13
+ 1130 04d3 01       		.uleb128 0x1
+ 1131 04d4 50       		.byte	0x50
+ 1132 04d5 03       		.uleb128 0x3
+ 1133 04d6 0A       		.byte	0xa
+ 1134 04d7 D007     		.2byte	0x7d0
+ 1135 04d9 00       		.byte	0
+ 1136 04da 12       		.uleb128 0x12
+ 1137 04db 14010000 		.4byte	.LVL81
+ 1138 04df 3E060000 		.4byte	0x63e
+ 1139 04e3 F7040000 		.4byte	0x4f7
+ 1140 04e7 13       		.uleb128 0x13
+ 1141 04e8 01       		.uleb128 0x1
+ 1142 04e9 50       		.byte	0x50
+ 1143 04ea 02       		.uleb128 0x2
+ 1144 04eb 7D       		.byte	0x7d
+ 1145 04ec 00       		.sleb128 0
+ 1146 04ed 13       		.uleb128 0x13
+ 1147 04ee 01       		.uleb128 0x1
+ 1148 04ef 51       		.byte	0x51
+ 1149 04f0 05       		.uleb128 0x5
+ 1150 04f1 03       		.byte	0x3
+ 1151 04f2 00000000 		.4byte	.LC0
+ 1152 04f6 00       		.byte	0
+ 1153 04f7 12       		.uleb128 0x12
+ 1154 04f8 1A010000 		.4byte	.LVL82
+ 1155 04fc 33060000 		.4byte	0x633
+ 1156 0500 0A050000 		.4byte	0x50a
+ 1157 0504 13       		.uleb128 0x13
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 24
+
+
+ 1158 0505 01       		.uleb128 0x1
+ 1159 0506 50       		.byte	0x50
+ 1160 0507 01       		.uleb128 0x1
+ 1161 0508 31       		.byte	0x31
+ 1162 0509 00       		.byte	0
+ 1163 050a 12       		.uleb128 0x12
+ 1164 050b 20010000 		.4byte	.LVL83
+ 1165 050f 12060000 		.4byte	0x612
+ 1166 0513 1D050000 		.4byte	0x51d
+ 1167 0517 13       		.uleb128 0x13
+ 1168 0518 01       		.uleb128 0x1
+ 1169 0519 50       		.byte	0x50
+ 1170 051a 01       		.uleb128 0x1
+ 1171 051b 44       		.byte	0x44
+ 1172 051c 00       		.byte	0
+ 1173 051d 12       		.uleb128 0x12
+ 1174 051e 28010000 		.4byte	.LVL84
+ 1175 0522 49060000 		.4byte	0x649
+ 1176 0526 35050000 		.4byte	0x535
+ 1177 052a 13       		.uleb128 0x13
+ 1178 052b 01       		.uleb128 0x1
+ 1179 052c 50       		.byte	0x50
+ 1180 052d 01       		.uleb128 0x1
+ 1181 052e 30       		.byte	0x30
+ 1182 052f 13       		.uleb128 0x13
+ 1183 0530 01       		.uleb128 0x1
+ 1184 0531 51       		.byte	0x51
+ 1185 0532 01       		.uleb128 0x1
+ 1186 0533 30       		.byte	0x30
+ 1187 0534 00       		.byte	0
+ 1188 0535 12       		.uleb128 0x12
+ 1189 0536 2E010000 		.4byte	.LVL85
+ 1190 053a 54060000 		.4byte	0x654
+ 1191 053e 4C050000 		.4byte	0x54c
+ 1192 0542 13       		.uleb128 0x13
+ 1193 0543 01       		.uleb128 0x1
+ 1194 0544 50       		.byte	0x50
+ 1195 0545 05       		.uleb128 0x5
+ 1196 0546 03       		.byte	0x3
+ 1197 0547 20000000 		.4byte	.LC3
+ 1198 054b 00       		.byte	0
+ 1199 054c 12       		.uleb128 0x12
+ 1200 054d 36010000 		.4byte	.LVL87
+ 1201 0551 EA000000 		.4byte	0xea
+ 1202 0555 61050000 		.4byte	0x561
+ 1203 0559 13       		.uleb128 0x13
+ 1204 055a 01       		.uleb128 0x1
+ 1205 055b 50       		.byte	0x50
+ 1206 055c 03       		.uleb128 0x3
+ 1207 055d F5       		.byte	0xf5
+ 1208 055e 04       		.uleb128 0x4
+ 1209 055f 25       		.uleb128 0x25
+ 1210 0560 00       		.byte	0
+ 1211 0561 12       		.uleb128 0x12
+ 1212 0562 3C010000 		.4byte	.LVL88
+ 1213 0566 BB010000 		.4byte	0x1bb
+ 1214 056a 74050000 		.4byte	0x574
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 25
+
+
+ 1215 056e 13       		.uleb128 0x13
+ 1216 056f 01       		.uleb128 0x1
+ 1217 0570 51       		.byte	0x51
+ 1218 0571 01       		.uleb128 0x1
+ 1219 0572 31       		.byte	0x31
+ 1220 0573 00       		.byte	0
+ 1221 0574 12       		.uleb128 0x12
+ 1222 0575 42010000 		.4byte	.LVL89
+ 1223 0579 52010000 		.4byte	0x152
+ 1224 057d 89050000 		.4byte	0x589
+ 1225 0581 13       		.uleb128 0x13
+ 1226 0582 01       		.uleb128 0x1
+ 1227 0583 50       		.byte	0x50
+ 1228 0584 03       		.uleb128 0x3
+ 1229 0585 F5       		.byte	0xf5
+ 1230 0586 04       		.uleb128 0x4
+ 1231 0587 25       		.uleb128 0x25
+ 1232 0588 00       		.byte	0
+ 1233 0589 14       		.uleb128 0x14
+ 1234 058a 48010000 		.4byte	.LVL90
+ 1235 058e BB010000 		.4byte	0x1bb
+ 1236 0592 13       		.uleb128 0x13
+ 1237 0593 01       		.uleb128 0x1
+ 1238 0594 51       		.byte	0x51
+ 1239 0595 01       		.uleb128 0x1
+ 1240 0596 32       		.byte	0x32
+ 1241 0597 00       		.byte	0
+ 1242 0598 00       		.byte	0
+ 1243 0599 19       		.uleb128 0x19
+ 1244 059a A5000000 		.4byte	0xa5
+ 1245 059e A9050000 		.4byte	0x5a9
+ 1246 05a2 1A       		.uleb128 0x1a
+ 1247 05a3 BF000000 		.4byte	0xbf
+ 1248 05a7 07       		.byte	0x7
+ 1249 05a8 00       		.byte	0
+ 1250 05a9 1B       		.uleb128 0x1b
+ 1251 05aa 6E020000 		.4byte	.LASF43
+ 1252 05ae 05       		.byte	0x5
+ 1253 05af 1207     		.2byte	0x712
+ 1254 05b1 B5050000 		.4byte	0x5b5
+ 1255 05b5 1C       		.uleb128 0x1c
+ 1256 05b6 93000000 		.4byte	0x93
+ 1257 05ba 1D       		.uleb128 0x1d
+ 1258 05bb 06010000 		.4byte	.LASF44
+ 1259 05bf 01       		.byte	0x1
+ 1260 05c0 06       		.byte	0x6
+ 1261 05c1 7A000000 		.4byte	0x7a
+ 1262 05c5 05       		.uleb128 0x5
+ 1263 05c6 03       		.byte	0x3
+ 1264 05c7 00000000 		.4byte	previous_compare
+ 1265 05cb 1D       		.uleb128 0x1d
+ 1266 05cc 69020000 		.4byte	.LASF45
+ 1267 05d0 01       		.byte	0x1
+ 1268 05d1 07       		.byte	0x7
+ 1269 05d2 7A000000 		.4byte	0x7a
+ 1270 05d6 05       		.uleb128 0x5
+ 1271 05d7 03       		.byte	0x3
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 26
+
+
+ 1272 05d8 00000000 		.4byte	flag
+ 1273 05dc 1E       		.uleb128 0x1e
+ 1274 05dd 613200   		.ascii	"a2\000"
+ 1275 05e0 01       		.byte	0x1
+ 1276 05e1 0A       		.byte	0xa
+ 1277 05e2 25000000 		.4byte	0x25
+ 1278 05e6 05       		.uleb128 0x5
+ 1279 05e7 03       		.byte	0x3
+ 1280 05e8 00000000 		.4byte	a2
+ 1281 05ec 1E       		.uleb128 0x1e
+ 1282 05ed 613400   		.ascii	"a4\000"
+ 1283 05f0 01       		.byte	0x1
+ 1284 05f1 0B       		.byte	0xb
+ 1285 05f2 25000000 		.4byte	0x25
+ 1286 05f6 05       		.uleb128 0x5
+ 1287 05f7 03       		.byte	0x3
+ 1288 05f8 00000000 		.4byte	a4
+ 1289 05fc 1F       		.uleb128 0x1f
+ 1290 05fd A1000000 		.4byte	.LASF46
+ 1291 0601 A1000000 		.4byte	.LASF46
+ 1292 0605 06       		.byte	0x6
+ 1293 0606 C7       		.byte	0xc7
+ 1294 0607 1F       		.uleb128 0x1f
+ 1295 0608 B3000000 		.4byte	.LASF47
+ 1296 060c B3000000 		.4byte	.LASF47
+ 1297 0610 06       		.byte	0x6
+ 1298 0611 CA       		.byte	0xca
+ 1299 0612 1F       		.uleb128 0x1f
+ 1300 0613 09030000 		.4byte	.LASF48
+ 1301 0617 09030000 		.4byte	.LASF48
+ 1302 061b 07       		.byte	0x7
+ 1303 061c 76       		.byte	0x76
+ 1304 061d 1F       		.uleb128 0x1f
+ 1305 061e 3D020000 		.4byte	.LASF49
+ 1306 0622 3D020000 		.4byte	.LASF49
+ 1307 0626 06       		.byte	0x6
+ 1308 0627 92       		.byte	0x92
+ 1309 0628 1F       		.uleb128 0x1f
+ 1310 0629 0F000000 		.4byte	.LASF50
+ 1311 062d 0F000000 		.4byte	.LASF50
+ 1312 0631 08       		.byte	0x8
+ 1313 0632 71       		.byte	0x71
+ 1314 0633 1F       		.uleb128 0x1f
+ 1315 0634 2D010000 		.4byte	.LASF51
+ 1316 0638 2D010000 		.4byte	.LASF51
+ 1317 063c 09       		.byte	0x9
+ 1318 063d 3A       		.byte	0x3a
+ 1319 063e 1F       		.uleb128 0x1f
+ 1320 063f 25010000 		.4byte	.LASF52
+ 1321 0643 25010000 		.4byte	.LASF52
+ 1322 0647 0A       		.byte	0xa
+ 1323 0648 E7       		.byte	0xe7
+ 1324 0649 1F       		.uleb128 0x1f
+ 1325 064a F1010000 		.4byte	.LASF53
+ 1326 064e F1010000 		.4byte	.LASF53
+ 1327 0652 09       		.byte	0x9
+ 1328 0653 3D       		.byte	0x3d
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 27
+
+
+ 1329 0654 1F       		.uleb128 0x1f
+ 1330 0655 9E010000 		.4byte	.LASF54
+ 1331 0659 9E010000 		.4byte	.LASF54
+ 1332 065d 09       		.byte	0x9
+ 1333 065e 3C       		.byte	0x3c
+ 1334 065f 00       		.byte	0
+ 1335              		.section	.debug_abbrev,"",%progbits
+ 1336              	.Ldebug_abbrev0:
+ 1337 0000 01       		.uleb128 0x1
+ 1338 0001 11       		.uleb128 0x11
+ 1339 0002 01       		.byte	0x1
+ 1340 0003 25       		.uleb128 0x25
+ 1341 0004 0E       		.uleb128 0xe
+ 1342 0005 13       		.uleb128 0x13
+ 1343 0006 0B       		.uleb128 0xb
+ 1344 0007 03       		.uleb128 0x3
+ 1345 0008 0E       		.uleb128 0xe
+ 1346 0009 1B       		.uleb128 0x1b
+ 1347 000a 0E       		.uleb128 0xe
+ 1348 000b 55       		.uleb128 0x55
+ 1349 000c 17       		.uleb128 0x17
+ 1350 000d 11       		.uleb128 0x11
+ 1351 000e 01       		.uleb128 0x1
+ 1352 000f 10       		.uleb128 0x10
+ 1353 0010 17       		.uleb128 0x17
+ 1354 0011 00       		.byte	0
+ 1355 0012 00       		.byte	0
+ 1356 0013 02       		.uleb128 0x2
+ 1357 0014 24       		.uleb128 0x24
+ 1358 0015 00       		.byte	0
+ 1359 0016 0B       		.uleb128 0xb
+ 1360 0017 0B       		.uleb128 0xb
+ 1361 0018 3E       		.uleb128 0x3e
+ 1362 0019 0B       		.uleb128 0xb
+ 1363 001a 03       		.uleb128 0x3
+ 1364 001b 0E       		.uleb128 0xe
+ 1365 001c 00       		.byte	0
+ 1366 001d 00       		.byte	0
+ 1367 001e 03       		.uleb128 0x3
+ 1368 001f 16       		.uleb128 0x16
+ 1369 0020 00       		.byte	0
+ 1370 0021 03       		.uleb128 0x3
+ 1371 0022 0E       		.uleb128 0xe
+ 1372 0023 3A       		.uleb128 0x3a
+ 1373 0024 0B       		.uleb128 0xb
+ 1374 0025 3B       		.uleb128 0x3b
+ 1375 0026 0B       		.uleb128 0xb
+ 1376 0027 49       		.uleb128 0x49
+ 1377 0028 13       		.uleb128 0x13
+ 1378 0029 00       		.byte	0
+ 1379 002a 00       		.byte	0
+ 1380 002b 04       		.uleb128 0x4
+ 1381 002c 24       		.uleb128 0x24
+ 1382 002d 00       		.byte	0
+ 1383 002e 0B       		.uleb128 0xb
+ 1384 002f 0B       		.uleb128 0xb
+ 1385 0030 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 28
+
+
+ 1386 0031 0B       		.uleb128 0xb
+ 1387 0032 03       		.uleb128 0x3
+ 1388 0033 08       		.uleb128 0x8
+ 1389 0034 00       		.byte	0
+ 1390 0035 00       		.byte	0
+ 1391 0036 05       		.uleb128 0x5
+ 1392 0037 16       		.uleb128 0x16
+ 1393 0038 00       		.byte	0
+ 1394 0039 03       		.uleb128 0x3
+ 1395 003a 0E       		.uleb128 0xe
+ 1396 003b 3A       		.uleb128 0x3a
+ 1397 003c 0B       		.uleb128 0xb
+ 1398 003d 3B       		.uleb128 0x3b
+ 1399 003e 05       		.uleb128 0x5
+ 1400 003f 49       		.uleb128 0x49
+ 1401 0040 13       		.uleb128 0x13
+ 1402 0041 00       		.byte	0
+ 1403 0042 00       		.byte	0
+ 1404 0043 06       		.uleb128 0x6
+ 1405 0044 04       		.uleb128 0x4
+ 1406 0045 01       		.byte	0x1
+ 1407 0046 0B       		.uleb128 0xb
+ 1408 0047 0B       		.uleb128 0xb
+ 1409 0048 49       		.uleb128 0x49
+ 1410 0049 13       		.uleb128 0x13
+ 1411 004a 3A       		.uleb128 0x3a
+ 1412 004b 0B       		.uleb128 0xb
+ 1413 004c 3B       		.uleb128 0x3b
+ 1414 004d 0B       		.uleb128 0xb
+ 1415 004e 01       		.uleb128 0x1
+ 1416 004f 13       		.uleb128 0x13
+ 1417 0050 00       		.byte	0
+ 1418 0051 00       		.byte	0
+ 1419 0052 07       		.uleb128 0x7
+ 1420 0053 28       		.uleb128 0x28
+ 1421 0054 00       		.byte	0
+ 1422 0055 03       		.uleb128 0x3
+ 1423 0056 0E       		.uleb128 0xe
+ 1424 0057 1C       		.uleb128 0x1c
+ 1425 0058 0B       		.uleb128 0xb
+ 1426 0059 00       		.byte	0
+ 1427 005a 00       		.byte	0
+ 1428 005b 08       		.uleb128 0x8
+ 1429 005c 2E       		.uleb128 0x2e
+ 1430 005d 01       		.byte	0x1
+ 1431 005e 3F       		.uleb128 0x3f
+ 1432 005f 19       		.uleb128 0x19
+ 1433 0060 03       		.uleb128 0x3
+ 1434 0061 0E       		.uleb128 0xe
+ 1435 0062 3A       		.uleb128 0x3a
+ 1436 0063 0B       		.uleb128 0xb
+ 1437 0064 3B       		.uleb128 0x3b
+ 1438 0065 0B       		.uleb128 0xb
+ 1439 0066 27       		.uleb128 0x27
+ 1440 0067 19       		.uleb128 0x19
+ 1441 0068 49       		.uleb128 0x49
+ 1442 0069 13       		.uleb128 0x13
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 29
+
+
+ 1443 006a 11       		.uleb128 0x11
+ 1444 006b 01       		.uleb128 0x1
+ 1445 006c 12       		.uleb128 0x12
+ 1446 006d 06       		.uleb128 0x6
+ 1447 006e 40       		.uleb128 0x40
+ 1448 006f 18       		.uleb128 0x18
+ 1449 0070 9642     		.uleb128 0x2116
+ 1450 0072 19       		.uleb128 0x19
+ 1451 0073 01       		.uleb128 0x1
+ 1452 0074 13       		.uleb128 0x13
+ 1453 0075 00       		.byte	0
+ 1454 0076 00       		.byte	0
+ 1455 0077 09       		.uleb128 0x9
+ 1456 0078 05       		.uleb128 0x5
+ 1457 0079 00       		.byte	0
+ 1458 007a 03       		.uleb128 0x3
+ 1459 007b 0E       		.uleb128 0xe
+ 1460 007c 3A       		.uleb128 0x3a
+ 1461 007d 0B       		.uleb128 0xb
+ 1462 007e 3B       		.uleb128 0x3b
+ 1463 007f 0B       		.uleb128 0xb
+ 1464 0080 49       		.uleb128 0x49
+ 1465 0081 13       		.uleb128 0x13
+ 1466 0082 02       		.uleb128 0x2
+ 1467 0083 17       		.uleb128 0x17
+ 1468 0084 00       		.byte	0
+ 1469 0085 00       		.byte	0
+ 1470 0086 0A       		.uleb128 0xa
+ 1471 0087 34       		.uleb128 0x34
+ 1472 0088 00       		.byte	0
+ 1473 0089 03       		.uleb128 0x3
+ 1474 008a 0E       		.uleb128 0xe
+ 1475 008b 3A       		.uleb128 0x3a
+ 1476 008c 0B       		.uleb128 0xb
+ 1477 008d 3B       		.uleb128 0x3b
+ 1478 008e 0B       		.uleb128 0xb
+ 1479 008f 49       		.uleb128 0x49
+ 1480 0090 13       		.uleb128 0x13
+ 1481 0091 02       		.uleb128 0x2
+ 1482 0092 18       		.uleb128 0x18
+ 1483 0093 00       		.byte	0
+ 1484 0094 00       		.byte	0
+ 1485 0095 0B       		.uleb128 0xb
+ 1486 0096 34       		.uleb128 0x34
+ 1487 0097 00       		.byte	0
+ 1488 0098 03       		.uleb128 0x3
+ 1489 0099 0E       		.uleb128 0xe
+ 1490 009a 3A       		.uleb128 0x3a
+ 1491 009b 0B       		.uleb128 0xb
+ 1492 009c 3B       		.uleb128 0x3b
+ 1493 009d 0B       		.uleb128 0xb
+ 1494 009e 49       		.uleb128 0x49
+ 1495 009f 13       		.uleb128 0x13
+ 1496 00a0 1C       		.uleb128 0x1c
+ 1497 00a1 05       		.uleb128 0x5
+ 1498 00a2 00       		.byte	0
+ 1499 00a3 00       		.byte	0
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 30
+
+
+ 1500 00a4 0C       		.uleb128 0xc
+ 1501 00a5 34       		.uleb128 0x34
+ 1502 00a6 00       		.byte	0
+ 1503 00a7 03       		.uleb128 0x3
+ 1504 00a8 0E       		.uleb128 0xe
+ 1505 00a9 3A       		.uleb128 0x3a
+ 1506 00aa 0B       		.uleb128 0xb
+ 1507 00ab 3B       		.uleb128 0x3b
+ 1508 00ac 0B       		.uleb128 0xb
+ 1509 00ad 49       		.uleb128 0x49
+ 1510 00ae 13       		.uleb128 0x13
+ 1511 00af 1C       		.uleb128 0x1c
+ 1512 00b0 0B       		.uleb128 0xb
+ 1513 00b1 00       		.byte	0
+ 1514 00b2 00       		.byte	0
+ 1515 00b3 0D       		.uleb128 0xd
+ 1516 00b4 34       		.uleb128 0x34
+ 1517 00b5 00       		.byte	0
+ 1518 00b6 03       		.uleb128 0x3
+ 1519 00b7 0E       		.uleb128 0xe
+ 1520 00b8 3A       		.uleb128 0x3a
+ 1521 00b9 0B       		.uleb128 0xb
+ 1522 00ba 3B       		.uleb128 0x3b
+ 1523 00bb 0B       		.uleb128 0xb
+ 1524 00bc 49       		.uleb128 0x49
+ 1525 00bd 13       		.uleb128 0x13
+ 1526 00be 1C       		.uleb128 0x1c
+ 1527 00bf 0D       		.uleb128 0xd
+ 1528 00c0 00       		.byte	0
+ 1529 00c1 00       		.byte	0
+ 1530 00c2 0E       		.uleb128 0xe
+ 1531 00c3 2E       		.uleb128 0x2e
+ 1532 00c4 01       		.byte	0x1
+ 1533 00c5 3F       		.uleb128 0x3f
+ 1534 00c6 19       		.uleb128 0x19
+ 1535 00c7 03       		.uleb128 0x3
+ 1536 00c8 0E       		.uleb128 0xe
+ 1537 00c9 3A       		.uleb128 0x3a
+ 1538 00ca 0B       		.uleb128 0xb
+ 1539 00cb 3B       		.uleb128 0x3b
+ 1540 00cc 0B       		.uleb128 0xb
+ 1541 00cd 27       		.uleb128 0x27
+ 1542 00ce 19       		.uleb128 0x19
+ 1543 00cf 11       		.uleb128 0x11
+ 1544 00d0 01       		.uleb128 0x1
+ 1545 00d1 12       		.uleb128 0x12
+ 1546 00d2 06       		.uleb128 0x6
+ 1547 00d3 40       		.uleb128 0x40
+ 1548 00d4 18       		.uleb128 0x18
+ 1549 00d5 9742     		.uleb128 0x2117
+ 1550 00d7 19       		.uleb128 0x19
+ 1551 00d8 01       		.uleb128 0x1
+ 1552 00d9 13       		.uleb128 0x13
+ 1553 00da 00       		.byte	0
+ 1554 00db 00       		.byte	0
+ 1555 00dc 0F       		.uleb128 0xf
+ 1556 00dd 05       		.uleb128 0x5
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 31
+
+
+ 1557 00de 00       		.byte	0
+ 1558 00df 03       		.uleb128 0x3
+ 1559 00e0 08       		.uleb128 0x8
+ 1560 00e1 3A       		.uleb128 0x3a
+ 1561 00e2 0B       		.uleb128 0xb
+ 1562 00e3 3B       		.uleb128 0x3b
+ 1563 00e4 0B       		.uleb128 0xb
+ 1564 00e5 49       		.uleb128 0x49
+ 1565 00e6 13       		.uleb128 0x13
+ 1566 00e7 02       		.uleb128 0x2
+ 1567 00e8 17       		.uleb128 0x17
+ 1568 00e9 00       		.byte	0
+ 1569 00ea 00       		.byte	0
+ 1570 00eb 10       		.uleb128 0x10
+ 1571 00ec 0B       		.uleb128 0xb
+ 1572 00ed 01       		.byte	0x1
+ 1573 00ee 11       		.uleb128 0x11
+ 1574 00ef 01       		.uleb128 0x1
+ 1575 00f0 12       		.uleb128 0x12
+ 1576 00f1 06       		.uleb128 0x6
+ 1577 00f2 01       		.uleb128 0x1
+ 1578 00f3 13       		.uleb128 0x13
+ 1579 00f4 00       		.byte	0
+ 1580 00f5 00       		.byte	0
+ 1581 00f6 11       		.uleb128 0x11
+ 1582 00f7 34       		.uleb128 0x34
+ 1583 00f8 00       		.byte	0
+ 1584 00f9 03       		.uleb128 0x3
+ 1585 00fa 08       		.uleb128 0x8
+ 1586 00fb 3A       		.uleb128 0x3a
+ 1587 00fc 0B       		.uleb128 0xb
+ 1588 00fd 3B       		.uleb128 0x3b
+ 1589 00fe 0B       		.uleb128 0xb
+ 1590 00ff 49       		.uleb128 0x49
+ 1591 0100 13       		.uleb128 0x13
+ 1592 0101 02       		.uleb128 0x2
+ 1593 0102 17       		.uleb128 0x17
+ 1594 0103 00       		.byte	0
+ 1595 0104 00       		.byte	0
+ 1596 0105 12       		.uleb128 0x12
+ 1597 0106 898201   		.uleb128 0x4109
+ 1598 0109 01       		.byte	0x1
+ 1599 010a 11       		.uleb128 0x11
+ 1600 010b 01       		.uleb128 0x1
+ 1601 010c 31       		.uleb128 0x31
+ 1602 010d 13       		.uleb128 0x13
+ 1603 010e 01       		.uleb128 0x1
+ 1604 010f 13       		.uleb128 0x13
+ 1605 0110 00       		.byte	0
+ 1606 0111 00       		.byte	0
+ 1607 0112 13       		.uleb128 0x13
+ 1608 0113 8A8201   		.uleb128 0x410a
+ 1609 0116 00       		.byte	0
+ 1610 0117 02       		.uleb128 0x2
+ 1611 0118 18       		.uleb128 0x18
+ 1612 0119 9142     		.uleb128 0x2111
+ 1613 011b 18       		.uleb128 0x18
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 32
+
+
+ 1614 011c 00       		.byte	0
+ 1615 011d 00       		.byte	0
+ 1616 011e 14       		.uleb128 0x14
+ 1617 011f 898201   		.uleb128 0x4109
+ 1618 0122 01       		.byte	0x1
+ 1619 0123 11       		.uleb128 0x11
+ 1620 0124 01       		.uleb128 0x1
+ 1621 0125 31       		.uleb128 0x31
+ 1622 0126 13       		.uleb128 0x13
+ 1623 0127 00       		.byte	0
+ 1624 0128 00       		.byte	0
+ 1625 0129 15       		.uleb128 0x15
+ 1626 012a 34       		.uleb128 0x34
+ 1627 012b 00       		.byte	0
+ 1628 012c 03       		.uleb128 0x3
+ 1629 012d 0E       		.uleb128 0xe
+ 1630 012e 3A       		.uleb128 0x3a
+ 1631 012f 0B       		.uleb128 0xb
+ 1632 0130 3B       		.uleb128 0x3b
+ 1633 0131 0B       		.uleb128 0xb
+ 1634 0132 49       		.uleb128 0x49
+ 1635 0133 13       		.uleb128 0x13
+ 1636 0134 02       		.uleb128 0x2
+ 1637 0135 17       		.uleb128 0x17
+ 1638 0136 00       		.byte	0
+ 1639 0137 00       		.byte	0
+ 1640 0138 16       		.uleb128 0x16
+ 1641 0139 34       		.uleb128 0x34
+ 1642 013a 00       		.byte	0
+ 1643 013b 03       		.uleb128 0x3
+ 1644 013c 08       		.uleb128 0x8
+ 1645 013d 3A       		.uleb128 0x3a
+ 1646 013e 0B       		.uleb128 0xb
+ 1647 013f 3B       		.uleb128 0x3b
+ 1648 0140 0B       		.uleb128 0xb
+ 1649 0141 49       		.uleb128 0x49
+ 1650 0142 13       		.uleb128 0x13
+ 1651 0143 02       		.uleb128 0x2
+ 1652 0144 18       		.uleb128 0x18
+ 1653 0145 00       		.byte	0
+ 1654 0146 00       		.byte	0
+ 1655 0147 17       		.uleb128 0x17
+ 1656 0148 34       		.uleb128 0x34
+ 1657 0149 00       		.byte	0
+ 1658 014a 03       		.uleb128 0x3
+ 1659 014b 0E       		.uleb128 0xe
+ 1660 014c 3A       		.uleb128 0x3a
+ 1661 014d 0B       		.uleb128 0xb
+ 1662 014e 3B       		.uleb128 0x3b
+ 1663 014f 0B       		.uleb128 0xb
+ 1664 0150 49       		.uleb128 0x49
+ 1665 0151 13       		.uleb128 0x13
+ 1666 0152 00       		.byte	0
+ 1667 0153 00       		.byte	0
+ 1668 0154 18       		.uleb128 0x18
+ 1669 0155 898201   		.uleb128 0x4109
+ 1670 0158 00       		.byte	0
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 33
+
+
+ 1671 0159 11       		.uleb128 0x11
+ 1672 015a 01       		.uleb128 0x1
+ 1673 015b 31       		.uleb128 0x31
+ 1674 015c 13       		.uleb128 0x13
+ 1675 015d 00       		.byte	0
+ 1676 015e 00       		.byte	0
+ 1677 015f 19       		.uleb128 0x19
+ 1678 0160 01       		.uleb128 0x1
+ 1679 0161 01       		.byte	0x1
+ 1680 0162 49       		.uleb128 0x49
+ 1681 0163 13       		.uleb128 0x13
+ 1682 0164 01       		.uleb128 0x1
+ 1683 0165 13       		.uleb128 0x13
+ 1684 0166 00       		.byte	0
+ 1685 0167 00       		.byte	0
+ 1686 0168 1A       		.uleb128 0x1a
+ 1687 0169 21       		.uleb128 0x21
+ 1688 016a 00       		.byte	0
+ 1689 016b 49       		.uleb128 0x49
+ 1690 016c 13       		.uleb128 0x13
+ 1691 016d 2F       		.uleb128 0x2f
+ 1692 016e 0B       		.uleb128 0xb
+ 1693 016f 00       		.byte	0
+ 1694 0170 00       		.byte	0
+ 1695 0171 1B       		.uleb128 0x1b
+ 1696 0172 34       		.uleb128 0x34
+ 1697 0173 00       		.byte	0
+ 1698 0174 03       		.uleb128 0x3
+ 1699 0175 0E       		.uleb128 0xe
+ 1700 0176 3A       		.uleb128 0x3a
+ 1701 0177 0B       		.uleb128 0xb
+ 1702 0178 3B       		.uleb128 0x3b
+ 1703 0179 05       		.uleb128 0x5
+ 1704 017a 49       		.uleb128 0x49
+ 1705 017b 13       		.uleb128 0x13
+ 1706 017c 3F       		.uleb128 0x3f
+ 1707 017d 19       		.uleb128 0x19
+ 1708 017e 3C       		.uleb128 0x3c
+ 1709 017f 19       		.uleb128 0x19
+ 1710 0180 00       		.byte	0
+ 1711 0181 00       		.byte	0
+ 1712 0182 1C       		.uleb128 0x1c
+ 1713 0183 35       		.uleb128 0x35
+ 1714 0184 00       		.byte	0
+ 1715 0185 49       		.uleb128 0x49
+ 1716 0186 13       		.uleb128 0x13
+ 1717 0187 00       		.byte	0
+ 1718 0188 00       		.byte	0
+ 1719 0189 1D       		.uleb128 0x1d
+ 1720 018a 34       		.uleb128 0x34
+ 1721 018b 00       		.byte	0
+ 1722 018c 03       		.uleb128 0x3
+ 1723 018d 0E       		.uleb128 0xe
+ 1724 018e 3A       		.uleb128 0x3a
+ 1725 018f 0B       		.uleb128 0xb
+ 1726 0190 3B       		.uleb128 0x3b
+ 1727 0191 0B       		.uleb128 0xb
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 34
+
+
+ 1728 0192 49       		.uleb128 0x49
+ 1729 0193 13       		.uleb128 0x13
+ 1730 0194 3F       		.uleb128 0x3f
+ 1731 0195 19       		.uleb128 0x19
+ 1732 0196 02       		.uleb128 0x2
+ 1733 0197 18       		.uleb128 0x18
+ 1734 0198 00       		.byte	0
+ 1735 0199 00       		.byte	0
+ 1736 019a 1E       		.uleb128 0x1e
+ 1737 019b 34       		.uleb128 0x34
+ 1738 019c 00       		.byte	0
+ 1739 019d 03       		.uleb128 0x3
+ 1740 019e 08       		.uleb128 0x8
+ 1741 019f 3A       		.uleb128 0x3a
+ 1742 01a0 0B       		.uleb128 0xb
+ 1743 01a1 3B       		.uleb128 0x3b
+ 1744 01a2 0B       		.uleb128 0xb
+ 1745 01a3 49       		.uleb128 0x49
+ 1746 01a4 13       		.uleb128 0x13
+ 1747 01a5 3F       		.uleb128 0x3f
+ 1748 01a6 19       		.uleb128 0x19
+ 1749 01a7 02       		.uleb128 0x2
+ 1750 01a8 18       		.uleb128 0x18
+ 1751 01a9 00       		.byte	0
+ 1752 01aa 00       		.byte	0
+ 1753 01ab 1F       		.uleb128 0x1f
+ 1754 01ac 2E       		.uleb128 0x2e
+ 1755 01ad 00       		.byte	0
+ 1756 01ae 3F       		.uleb128 0x3f
+ 1757 01af 19       		.uleb128 0x19
+ 1758 01b0 3C       		.uleb128 0x3c
+ 1759 01b1 19       		.uleb128 0x19
+ 1760 01b2 6E       		.uleb128 0x6e
+ 1761 01b3 0E       		.uleb128 0xe
+ 1762 01b4 03       		.uleb128 0x3
+ 1763 01b5 0E       		.uleb128 0xe
+ 1764 01b6 3A       		.uleb128 0x3a
+ 1765 01b7 0B       		.uleb128 0xb
+ 1766 01b8 3B       		.uleb128 0x3b
+ 1767 01b9 0B       		.uleb128 0xb
+ 1768 01ba 00       		.byte	0
+ 1769 01bb 00       		.byte	0
+ 1770 01bc 00       		.byte	0
+ 1771              		.section	.debug_loc,"",%progbits
+ 1772              	.Ldebug_loc0:
+ 1773              	.LLST0:
+ 1774 0000 00000000 		.4byte	.LVL0
+ 1775 0004 09000000 		.4byte	.LVL2-1
+ 1776 0008 0100     		.2byte	0x1
+ 1777 000a 50       		.byte	0x50
+ 1778 000b 09000000 		.4byte	.LVL2-1
+ 1779 000f 1C000000 		.4byte	.LFE64
+ 1780 0013 0600     		.2byte	0x6
+ 1781 0015 F3       		.byte	0xf3
+ 1782 0016 03       		.uleb128 0x3
+ 1783 0017 F5       		.byte	0xf5
+ 1784 0018 00       		.uleb128 0
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 35
+
+
+ 1785 0019 25       		.uleb128 0x25
+ 1786 001a 9F       		.byte	0x9f
+ 1787 001b 00000000 		.4byte	0
+ 1788 001f 00000000 		.4byte	0
+ 1789              	.LLST1:
+ 1790 0023 00000000 		.4byte	.LVL5
+ 1791 0027 07000000 		.4byte	.LVL7-1
+ 1792 002b 0100     		.2byte	0x1
+ 1793 002d 50       		.byte	0x50
+ 1794 002e 07000000 		.4byte	.LVL7-1
+ 1795 0032 28000000 		.4byte	.LFE65
+ 1796 0036 0600     		.2byte	0x6
+ 1797 0038 F3       		.byte	0xf3
+ 1798 0039 03       		.uleb128 0x3
+ 1799 003a F5       		.byte	0xf5
+ 1800 003b 00       		.uleb128 0
+ 1801 003c 25       		.uleb128 0x25
+ 1802 003d 9F       		.byte	0x9f
+ 1803 003e 00000000 		.4byte	0
+ 1804 0042 00000000 		.4byte	0
+ 1805              	.LLST2:
+ 1806 0046 00000000 		.4byte	.LVL11
+ 1807 004a 12000000 		.4byte	.LVL12
+ 1808 004e 0100     		.2byte	0x1
+ 1809 0050 50       		.byte	0x50
+ 1810 0051 12000000 		.4byte	.LVL12
+ 1811 0055 32000000 		.4byte	.LVL17
+ 1812 0059 0100     		.2byte	0x1
+ 1813 005b 55       		.byte	0x55
+ 1814 005c 32000000 		.4byte	.LVL17
+ 1815 0060 38000000 		.4byte	.LVL18
+ 1816 0064 0100     		.2byte	0x1
+ 1817 0066 50       		.byte	0x50
+ 1818 0067 38000000 		.4byte	.LVL18
+ 1819 006b 64000000 		.4byte	.LVL25
+ 1820 006f 0100     		.2byte	0x1
+ 1821 0071 55       		.byte	0x55
+ 1822 0072 64000000 		.4byte	.LVL25
+ 1823 0076 68000000 		.4byte	.LFE66
+ 1824 007a 0400     		.2byte	0x4
+ 1825 007c F3       		.byte	0xf3
+ 1826 007d 01       		.uleb128 0x1
+ 1827 007e 50       		.byte	0x50
+ 1828 007f 9F       		.byte	0x9f
+ 1829 0080 00000000 		.4byte	0
+ 1830 0084 00000000 		.4byte	0
+ 1831              	.LLST3:
+ 1832 0088 00000000 		.4byte	.LVL11
+ 1833 008c 12000000 		.4byte	.LVL12
+ 1834 0090 0100     		.2byte	0x1
+ 1835 0092 51       		.byte	0x51
+ 1836 0093 12000000 		.4byte	.LVL12
+ 1837 0097 32000000 		.4byte	.LVL17
+ 1838 009b 0400     		.2byte	0x4
+ 1839 009d F3       		.byte	0xf3
+ 1840 009e 01       		.uleb128 0x1
+ 1841 009f 51       		.byte	0x51
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 36
+
+
+ 1842 00a0 9F       		.byte	0x9f
+ 1843 00a1 32000000 		.4byte	.LVL17
+ 1844 00a5 38000000 		.4byte	.LVL18
+ 1845 00a9 0100     		.2byte	0x1
+ 1846 00ab 51       		.byte	0x51
+ 1847 00ac 38000000 		.4byte	.LVL18
+ 1848 00b0 68000000 		.4byte	.LFE66
+ 1849 00b4 0400     		.2byte	0x4
+ 1850 00b6 F3       		.byte	0xf3
+ 1851 00b7 01       		.uleb128 0x1
+ 1852 00b8 51       		.byte	0x51
+ 1853 00b9 9F       		.byte	0x9f
+ 1854 00ba 00000000 		.4byte	0
+ 1855 00be 00000000 		.4byte	0
+ 1856              	.LLST4:
+ 1857 00c2 12000000 		.4byte	.LVL12
+ 1858 00c6 32000000 		.4byte	.LVL17
+ 1859 00ca 0100     		.2byte	0x1
+ 1860 00cc 54       		.byte	0x54
+ 1861 00cd 00000000 		.4byte	0
+ 1862 00d1 00000000 		.4byte	0
+ 1863              	.LLST5:
+ 1864 00d5 38000000 		.4byte	.LVL18
+ 1865 00d9 56000000 		.4byte	.LVL23
+ 1866 00dd 0100     		.2byte	0x1
+ 1867 00df 54       		.byte	0x54
+ 1868 00e0 00000000 		.4byte	0
+ 1869 00e4 00000000 		.4byte	0
+ 1870              	.LLST6:
+ 1871 00e8 10000000 		.4byte	.LVL28
+ 1872 00ec 16000000 		.4byte	.LVL29
+ 1873 00f0 0100     		.2byte	0x1
+ 1874 00f2 54       		.byte	0x54
+ 1875 00f3 16000000 		.4byte	.LVL29
+ 1876 00f7 1A000000 		.4byte	.LVL30
+ 1877 00fb 0100     		.2byte	0x1
+ 1878 00fd 50       		.byte	0x50
+ 1879 00fe 1A000000 		.4byte	.LVL30
+ 1880 0102 4E000000 		.4byte	.LVL41
+ 1881 0106 0100     		.2byte	0x1
+ 1882 0108 54       		.byte	0x54
+ 1883 0109 00000000 		.4byte	0
+ 1884 010d 00000000 		.4byte	0
+ 1885              	.LLST7:
+ 1886 0111 2E000000 		.4byte	.LVL34
+ 1887 0115 34000000 		.4byte	.LVL36
+ 1888 0119 0100     		.2byte	0x1
+ 1889 011b 55       		.byte	0x55
+ 1890 011c 34000000 		.4byte	.LVL36
+ 1891 0120 36000000 		.4byte	.LVL37
+ 1892 0124 0100     		.2byte	0x1
+ 1893 0126 50       		.byte	0x50
+ 1894 0127 36000000 		.4byte	.LVL37
+ 1895 012b AC000000 		.4byte	.LVL58
+ 1896 012f 0100     		.2byte	0x1
+ 1897 0131 55       		.byte	0x55
+ 1898 0132 00000000 		.4byte	0
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 37
+
+
+ 1899 0136 00000000 		.4byte	0
+ 1900              	.LLST8:
+ 1901 013a 4E000000 		.4byte	.LVL41
+ 1902 013e 50000000 		.4byte	.LVL42
+ 1903 0142 0100     		.2byte	0x1
+ 1904 0144 50       		.byte	0x50
+ 1905 0145 50000000 		.4byte	.LVL42
+ 1906 0149 C8000000 		.4byte	.LVL65
+ 1907 014d 0100     		.2byte	0x1
+ 1908 014f 54       		.byte	0x54
+ 1909 0150 00000000 		.4byte	0
+ 1910 0154 00000000 		.4byte	0
+ 1911              	.LLST9:
+ 1912 0158 60000000 		.4byte	.LVL45
+ 1913 015c 64000000 		.4byte	.LVL46
+ 1914 0160 0100     		.2byte	0x1
+ 1915 0162 50       		.byte	0x50
+ 1916 0163 64000000 		.4byte	.LVL46
+ 1917 0167 67000000 		.4byte	.LVL47-1
+ 1918 016b 0100     		.2byte	0x1
+ 1919 016d 51       		.byte	0x51
+ 1920 016e 00000000 		.4byte	0
+ 1921 0172 00000000 		.4byte	0
+ 1922              	.LLST10:
+ 1923 0176 68000000 		.4byte	.LVL47
+ 1924 017a 6B000000 		.4byte	.LVL48-1
+ 1925 017e 0100     		.2byte	0x1
+ 1926 0180 50       		.byte	0x50
+ 1927 0181 00000000 		.4byte	0
+ 1928 0185 00000000 		.4byte	0
+ 1929              	.LLST11:
+ 1930 0189 AC000000 		.4byte	.LVL58
+ 1931 018d AE000000 		.4byte	.LVL59
+ 1932 0191 0100     		.2byte	0x1
+ 1933 0193 50       		.byte	0x50
+ 1934 0194 AE000000 		.4byte	.LVL59
+ 1935 0198 B4000000 		.4byte	.LVL61
+ 1936 019c 0100     		.2byte	0x1
+ 1937 019e 55       		.byte	0x55
+ 1938 019f B4000000 		.4byte	.LVL61
+ 1939 01a3 B6000000 		.4byte	.LVL62
+ 1940 01a7 0100     		.2byte	0x1
+ 1941 01a9 50       		.byte	0x50
+ 1942 01aa B6000000 		.4byte	.LVL62
+ 1943 01ae EA000000 		.4byte	.LVL73
+ 1944 01b2 0100     		.2byte	0x1
+ 1945 01b4 55       		.byte	0x55
+ 1946 01b5 00000000 		.4byte	0
+ 1947 01b9 00000000 		.4byte	0
+ 1948              	.LLST12:
+ 1949 01bd C8000000 		.4byte	.LVL65
+ 1950 01c1 CA000000 		.4byte	.LVL66
+ 1951 01c5 0100     		.2byte	0x1
+ 1952 01c7 50       		.byte	0x50
+ 1953 01c8 CA000000 		.4byte	.LVL66
+ 1954 01cc D0000000 		.4byte	.LVL68
+ 1955 01d0 0100     		.2byte	0x1
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 38
+
+
+ 1956 01d2 54       		.byte	0x54
+ 1957 01d3 D0000000 		.4byte	.LVL68
+ 1958 01d7 D2000000 		.4byte	.LVL69
+ 1959 01db 0100     		.2byte	0x1
+ 1960 01dd 50       		.byte	0x50
+ 1961 01de D2000000 		.4byte	.LVL69
+ 1962 01e2 30010000 		.4byte	.LVL86
+ 1963 01e6 0100     		.2byte	0x1
+ 1964 01e8 54       		.byte	0x54
+ 1965 01e9 00000000 		.4byte	0
+ 1966 01ed 00000000 		.4byte	0
+ 1967              	.LLST13:
+ 1968 01f1 EA000000 		.4byte	.LVL73
+ 1969 01f5 EC000000 		.4byte	.LVL74
+ 1970 01f9 0100     		.2byte	0x1
+ 1971 01fb 50       		.byte	0x50
+ 1972 01fc EC000000 		.4byte	.LVL74
+ 1973 0200 4E010000 		.4byte	.LVL91
+ 1974 0204 0100     		.2byte	0x1
+ 1975 0206 55       		.byte	0x55
+ 1976 0207 00000000 		.4byte	0
+ 1977 020b 00000000 		.4byte	0
+ 1978              	.LLST14:
+ 1979 020f FC000000 		.4byte	.LVL77
+ 1980 0213 00010000 		.4byte	.LVL78
+ 1981 0217 0100     		.2byte	0x1
+ 1982 0219 50       		.byte	0x50
+ 1983 021a 00010000 		.4byte	.LVL78
+ 1984 021e 03010000 		.4byte	.LVL79-1
+ 1985 0222 0100     		.2byte	0x1
+ 1986 0224 51       		.byte	0x51
+ 1987 0225 00000000 		.4byte	0
+ 1988 0229 00000000 		.4byte	0
+ 1989              	.LLST15:
+ 1990 022d 04010000 		.4byte	.LVL79
+ 1991 0231 07010000 		.4byte	.LVL80-1
+ 1992 0235 0100     		.2byte	0x1
+ 1993 0237 50       		.byte	0x50
+ 1994 0238 00000000 		.4byte	0
+ 1995 023c 00000000 		.4byte	0
+ 1996              		.section	.debug_aranges,"",%progbits
+ 1997 0000 34000000 		.4byte	0x34
+ 1998 0004 0200     		.2byte	0x2
+ 1999 0006 00000000 		.4byte	.Ldebug_info0
+ 2000 000a 04       		.byte	0x4
+ 2001 000b 00       		.byte	0
+ 2002 000c 0000     		.2byte	0
+ 2003 000e 0000     		.2byte	0
+ 2004 0010 00000000 		.4byte	.LFB64
+ 2005 0014 1C000000 		.4byte	.LFE64-.LFB64
+ 2006 0018 00000000 		.4byte	.LFB65
+ 2007 001c 28000000 		.4byte	.LFE65-.LFB65
+ 2008 0020 00000000 		.4byte	.LFB66
+ 2009 0024 68000000 		.4byte	.LFE66-.LFB66
+ 2010 0028 00000000 		.4byte	.LFB67
+ 2011 002c 64010000 		.4byte	.LFE67-.LFB67
+ 2012 0030 00000000 		.4byte	0
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 39
+
+
+ 2013 0034 00000000 		.4byte	0
+ 2014              		.section	.debug_ranges,"",%progbits
+ 2015              	.Ldebug_ranges0:
+ 2016 0000 00000000 		.4byte	.LFB64
+ 2017 0004 1C000000 		.4byte	.LFE64
+ 2018 0008 00000000 		.4byte	.LFB65
+ 2019 000c 28000000 		.4byte	.LFE65
+ 2020 0010 00000000 		.4byte	.LFB66
+ 2021 0014 68000000 		.4byte	.LFE66
+ 2022 0018 00000000 		.4byte	.LFB67
+ 2023 001c 64010000 		.4byte	.LFE67
+ 2024 0020 00000000 		.4byte	0
+ 2025 0024 00000000 		.4byte	0
+ 2026              		.section	.debug_line,"",%progbits
+ 2027              	.Ldebug_line0:
+ 2028 0000 97020000 		.section	.debug_str,"MS",%progbits,1
+ 2028      0200EF01 
+ 2028      00000201 
+ 2028      FB0E0D00 
+ 2028      01010101 
+ 2029              	.LASF28:
+ 2030 0000 546F704D 		.ascii	"TopMotor_Theta\000"
+ 2030      6F746F72 
+ 2030      5F546865 
+ 2030      746100
+ 2031              	.LASF50:
+ 2032 000f 55415254 		.ascii	"UART_1_GetChar\000"
+ 2032      5F315F47 
+ 2032      65744368 
+ 2032      617200
+ 2033              	.LASF14:
+ 2034 001e 646F7562 		.ascii	"double\000"
+ 2034      6C6500
+ 2035              	.LASF19:
+ 2036 0025 70776D5F 		.ascii	"pwm_1\000"
+ 2036      3100
+ 2037              	.LASF20:
+ 2038 002b 70776D5F 		.ascii	"pwm_2\000"
+ 2038      3200
+ 2039              	.LASF18:
+ 2040 0031 73697A65 		.ascii	"sizetype\000"
+ 2040      74797065 
+ 2040      00
+ 2041              	.LASF37:
+ 2042 003a 52656365 		.ascii	"ReceiveD22\000"
+ 2042      69766544 
+ 2042      323200
+ 2043              	.LASF23:
+ 2044 0045 6D696E5F 		.ascii	"min_comp\000"
+ 2044      636F6D70 
+ 2044      00
+ 2045              	.LASF30:
+ 2046 004e 6D61696E 		.ascii	"main\000"
+ 2046      00
+ 2047              	.LASF21:
+ 2048 0053 50574D5F 		.ascii	"PWM_type\000"
+ 2048      74797065 
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 40
+
+
+ 2048      00
+ 2049              	.LASF25:
+ 2050 005c 6D696E5F 		.ascii	"min_angle\000"
+ 2050      616E676C 
+ 2050      6500
+ 2051              	.LASF3:
+ 2052 0066 73686F72 		.ascii	"short int\000"
+ 2052      7420696E 
+ 2052      7400
+ 2053              	.LASF12:
+ 2054 0070 75696E74 		.ascii	"uint8_t\000"
+ 2054      385F7400 
+ 2055              	.LASF1:
+ 2056 0078 7369676E 		.ascii	"signed char\000"
+ 2056      65642063 
+ 2056      68617200 
+ 2057              	.LASF0:
+ 2058 0084 666C6F61 		.ascii	"float\000"
+ 2058      7400
+ 2059              	.LASF35:
+ 2060 008a 52656365 		.ascii	"Received\000"
+ 2060      69766564 
+ 2060      00
+ 2061              	.LASF9:
+ 2062 0093 6C6F6E67 		.ascii	"long long int\000"
+ 2062      206C6F6E 
+ 2062      6720696E 
+ 2062      7400
+ 2063              	.LASF46:
+ 2064 00a1 50574D5F 		.ascii	"PWM_WriteCompare1\000"
+ 2064      57726974 
+ 2064      65436F6D 
+ 2064      70617265 
+ 2064      3100
+ 2065              	.LASF47:
+ 2066 00b3 50574D5F 		.ascii	"PWM_WriteCompare2\000"
+ 2066      57726974 
+ 2066      65436F6D 
+ 2066      70617265 
+ 2066      3200
+ 2067              	.LASF31:
+ 2068 00c5 52656365 		.ascii	"ReceiveD1\000"
+ 2068      69766544 
+ 2068      3100
+ 2069              	.LASF32:
+ 2070 00cf 52656365 		.ascii	"ReceiveD2\000"
+ 2070      69766544 
+ 2070      3200
+ 2071              	.LASF7:
+ 2072 00d9 6C6F6E67 		.ascii	"long int\000"
+ 2072      20696E74 
+ 2072      00
+ 2073              	.LASF39:
+ 2074 00e2 44656352 		.ascii	"DecReceived22\000"
+ 2074      65636569 
+ 2074      76656432 
+ 2074      3200
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 41
+
+
+ 2075              	.LASF5:
+ 2076 00f0 5F5F7569 		.ascii	"__uint8_t\000"
+ 2076      6E74385F 
+ 2076      7400
+ 2077              	.LASF17:
+ 2078 00fa 6C6F6E67 		.ascii	"long double\000"
+ 2078      20646F75 
+ 2078      626C6500 
+ 2079              	.LASF44:
+ 2080 0106 70726576 		.ascii	"previous_compare\000"
+ 2080      696F7573 
+ 2080      5F636F6D 
+ 2080      70617265 
+ 2080      00
+ 2081              	.LASF2:
+ 2082 0117 756E7369 		.ascii	"unsigned char\000"
+ 2082      676E6564 
+ 2082      20636861 
+ 2082      7200
+ 2083              	.LASF52:
+ 2084 0125 73707269 		.ascii	"sprintf\000"
+ 2084      6E746600 
+ 2085              	.LASF51:
+ 2086 012d 4C43445F 		.ascii	"LCD_Char_1_WriteControl\000"
+ 2086      43686172 
+ 2086      5F315F57 
+ 2086      72697465 
+ 2086      436F6E74 
+ 2087              	.LASF29:
+ 2088 0145 416E676C 		.ascii	"Angle\000"
+ 2088      6500
+ 2089              	.LASF10:
+ 2090 014b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2090      206C6F6E 
+ 2090      6720756E 
+ 2090      7369676E 
+ 2090      65642069 
+ 2091              	.LASF11:
+ 2092 0162 756E7369 		.ascii	"unsigned int\000"
+ 2092      676E6564 
+ 2092      20696E74 
+ 2092      00
+ 2093              	.LASF41:
+ 2094 016f 54686574 		.ascii	"Theta1\000"
+ 2094      613100
+ 2095              	.LASF42:
+ 2096 0176 54686574 		.ascii	"Theta2\000"
+ 2096      613200
+ 2097              	.LASF4:
+ 2098 017d 73686F72 		.ascii	"short unsigned int\000"
+ 2098      7420756E 
+ 2098      7369676E 
+ 2098      65642069 
+ 2098      6E7400
+ 2099              	.LASF24:
+ 2100 0190 6D61785F 		.ascii	"max_comp\000"
+ 2100      636F6D70 
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 42
+
+
+ 2100      00
+ 2101              	.LASF16:
+ 2102 0199 63686172 		.ascii	"char\000"
+ 2102      00
+ 2103              	.LASF54:
+ 2104 019e 4C43445F 		.ascii	"LCD_Char_1_PrintString\000"
+ 2104      43686172 
+ 2104      5F315F50 
+ 2104      72696E74 
+ 2104      53747269 
+ 2105              	.LASF26:
+ 2106 01b5 6D61785F 		.ascii	"max_angle\000"
+ 2106      616E676C 
+ 2106      6500
+ 2107              	.LASF13:
+ 2108 01bf 696E7433 		.ascii	"int32_t\000"
+ 2108      325F7400 
+ 2109              	.LASF15:
+ 2110 01c7 63686172 		.ascii	"char8\000"
+ 2110      3800
+ 2111              	.LASF33:
+ 2112 01cd 52656365 		.ascii	"ReceiveD1D\000"
+ 2112      69766544 
+ 2112      314400
+ 2113              	.LASF56:
+ 2114 01d8 6D61696E 		.ascii	"main.c\000"
+ 2114      2E6300
+ 2115              	.LASF8:
+ 2116 01df 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2116      20756E73 
+ 2116      69676E65 
+ 2116      6420696E 
+ 2116      7400
+ 2117              	.LASF53:
+ 2118 01f1 4C43445F 		.ascii	"LCD_Char_1_Position\000"
+ 2118      43686172 
+ 2118      5F315F50 
+ 2118      6F736974 
+ 2118      696F6E00 
+ 2119              	.LASF58:
+ 2120 0205 4D6F7665 		.ascii	"MoveMotor\000"
+ 2120      4D6F746F 
+ 2120      7200
+ 2121              	.LASF22:
+ 2122 020f 636F6D70 		.ascii	"compare\000"
+ 2122      61726500 
+ 2123              	.LASF6:
+ 2124 0217 5F5F696E 		.ascii	"__int32_t\000"
+ 2124      7433325F 
+ 2124      7400
+ 2125              	.LASF34:
+ 2126 0221 44656352 		.ascii	"DecReceived\000"
+ 2126      65636569 
+ 2126      76656400 
+ 2127              	.LASF27:
+ 2128 022d 42617365 		.ascii	"BaseMotor_Theta\000"
+ 2128      4D6F746F 
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 43
+
+
+ 2128      725F5468 
+ 2128      65746100 
+ 2129              	.LASF49:
+ 2130 023d 50574D5F 		.ascii	"PWM_Start\000"
+ 2130      53746172 
+ 2130      7400
+ 2131              	.LASF36:
+ 2132 0247 52656365 		.ascii	"ReceiveD12\000"
+ 2132      69766544 
+ 2132      313200
+ 2133              	.LASF40:
+ 2134 0252 52656365 		.ascii	"Received2\000"
+ 2134      69766564 
+ 2134      3200
+ 2135              	.LASF38:
+ 2136 025c 52656365 		.ascii	"ReceiveD1D22\000"
+ 2136      69766544 
+ 2136      31443232 
+ 2136      00
+ 2137              	.LASF45:
+ 2138 0269 666C6167 		.ascii	"flag\000"
+ 2138      00
+ 2139              	.LASF43:
+ 2140 026e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2140      52784275 
+ 2140      66666572 
+ 2140      00
+ 2141              	.LASF55:
+ 2142 027b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2142      43313120 
+ 2142      352E342E 
+ 2142      31203230 
+ 2142      31363036 
+ 2143 02ae 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2143      20726576 
+ 2143      6973696F 
+ 2143      6E203233 
+ 2143      37373135 
+ 2144 02e1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2144      66756E63 
+ 2144      74696F6E 
+ 2144      2D736563 
+ 2144      74696F6E 
+ 2145              	.LASF48:
+ 2146 0309 43794465 		.ascii	"CyDelay\000"
+ 2146      6C617900 
+ 2147              	.LASF57:
+ 2148 0311 433A5C55 		.ascii	"C:\\Users\\harri\\Documents\\code\\C\\Calibrated_Ro"
+ 2148      73657273 
+ 2148      5C686172 
+ 2148      72695C44 
+ 2148      6F63756D 
+ 2149 033e 626F745C 		.ascii	"bot\\Design01.cydsn\000"
+ 2149      44657369 
+ 2149      676E3031 
+ 2149      2E637964 
+ 2149      736E00
+ARM GAS  C:\Users\harri\AppData\Local\Temp\cc9AGNpU.s 			page 44
+
+
+ 2150              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
