@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
   28:Generated_Source\PSoC5/PWM.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
   29:Generated_Source\PSoC5/PWM.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWM.c **** #endif /* PWM_PWMUDB_genblk1_ctrlreg__REMOVED */
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 2
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
   85:Generated_Source\PSoC5/PWM.c **** {
   86:Generated_Source\PSoC5/PWM.c ****     #if (PWM_UsingFixedFunction || PWM_UseControl)
   87:Generated_Source\PSoC5/PWM.c ****         uint8 ctrl;
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 3
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 3
 
 
   88:Generated_Source\PSoC5/PWM.c ****     #endif /* (PWM_UsingFixedFunction || PWM_UseControl) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  142:Generated_Source\PSoC5/PWM.c ****             PWM_WriteCompare2(PWM_INIT_COMPARE_VALUE2);
  143:Generated_Source\PSoC5/PWM.c ****         #endif /* (PWM_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWM.c **** 
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 4
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 4
 
 
  145:Generated_Source\PSoC5/PWM.c ****         #if (PWM_KillModeMinTime)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  199:Generated_Source\PSoC5/PWM.c **** void PWM_Enable(void) 
  200:Generated_Source\PSoC5/PWM.c **** {
   28              		.loc 1 200 0
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 5
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 5
 
 
   29              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  230:Generated_Source\PSoC5/PWM.c **** *  has no effect on the operation of the PWM
  231:Generated_Source\PSoC5/PWM.c **** *
  232:Generated_Source\PSoC5/PWM.c **** *******************************************************************************/
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 6
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 6
 
 
  233:Generated_Source\PSoC5/PWM.c **** void PWM_Stop(void) 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  261:Generated_Source\PSoC5/PWM.c ****         *
  262:Generated_Source\PSoC5/PWM.c ****         * Return:
  263:Generated_Source\PSoC5/PWM.c ****         *  None
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 7
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 7
 
 
  264:Generated_Source\PSoC5/PWM.c ****         *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  318:Generated_Source\PSoC5/PWM.c ****         * Parameters:
  319:Generated_Source\PSoC5/PWM.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWM.c ****         *                defined in the H file as input arguments.
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 8
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 8
 
 
  321:Generated_Source\PSoC5/PWM.c ****         *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  375:Generated_Source\PSoC5/PWM.c ****     #endif /*PWM_CompareMode2SW */
  376:Generated_Source\PSoC5/PWM.c **** 
  377:Generated_Source\PSoC5/PWM.c **** #endif /* UseOneCompareMode */
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 9
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 9
 
 
  378:Generated_Source\PSoC5/PWM.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  407:Generated_Source\PSoC5/PWM.c ****     }
  408:Generated_Source\PSoC5/PWM.c **** 
  409:Generated_Source\PSoC5/PWM.c **** 
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 10
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 10
 
 
  410:Generated_Source\PSoC5/PWM.c ****     /*******************************************************************************
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  134              	.LFB7:
  435:Generated_Source\PSoC5/PWM.c **** 
  436:Generated_Source\PSoC5/PWM.c ****     #if (PWM_UseStatus)
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 11
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 11
 
 
  437:Generated_Source\PSoC5/PWM.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  485:Generated_Source\PSoC5/PWM.c ****         CY_SET_REG16(PWM_PERIOD_LSB_PTR, (uint16)period);
  486:Generated_Source\PSoC5/PWM.c ****     #else
  487:Generated_Source\PSoC5/PWM.c ****         CY_SET_REG16(PWM_PERIOD_LSB_PTR, period);
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 12
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 12
 
 
  141              		.loc 1 487 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  523:Generated_Source\PSoC5/PWM.c ****         #endif /* (PWM_UsingFixedFunction) */
  524:Generated_Source\PSoC5/PWM.c **** 
  525:Generated_Source\PSoC5/PWM.c ****         #if (PWM_PWMMode == PWM__B_PWM__DITHER)
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 13
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 13
 
 
  526:Generated_Source\PSoC5/PWM.c ****             #if(PWM_UsingFixedFunction)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  178              		.align	2
  179              		.global	PWM_WriteCompare2
  180              		.thumb
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 14
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 14
 
 
  181              		.thumb_func
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  206              		.thumb_func
  207              		.type	PWM_SetInterruptMode, %function
  208              	PWM_SetInterruptMode:
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 15
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 15
 
 
  209              	.LFB10:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  644:Generated_Source\PSoC5/PWM.c ****     * Return:
  645:Generated_Source\PSoC5/PWM.c ****     *  Dead Band Counts
  646:Generated_Source\PSoC5/PWM.c ****     *
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 16
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 16
 
 
  647:Generated_Source\PSoC5/PWM.c ****     *******************************************************************************/
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  224              		.cfi_endproc
  225              	.LFE10:
  226              		.size	PWM_SetInterruptMode, .-PWM_SetInterruptMode
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 17
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 17
 
 
  227              		.section	.text.PWM_ReadStatusRegister,"ax",%progbits
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  253              		.align	2
  254              		.global	PWM_ReadControlRegister
  255              		.thumb
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 18
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 18
 
 
  256              		.thumb_func
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  281              		.thumb
  282              		.thumb_func
  283              		.type	PWM_WriteControlRegister, %function
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 19
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 19
 
 
  284              	PWM_WriteControlRegister:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  771:Generated_Source\PSoC5/PWM.c **** 
  772:Generated_Source\PSoC5/PWM.c **** 
  773:Generated_Source\PSoC5/PWM.c **** #if (!PWM_UsingFixedFunction)
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 20
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 20
 
 
  774:Generated_Source\PSoC5/PWM.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  344              		.cfi_offset 14, -4
  455:Generated_Source\PSoC5/PWM.c ****             {
  345              		.loc 1 455 0
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 21
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 21
 
 
  346 0002 01E0     		b	.L38
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  392              		.loc 1 130 0
  393 001a 0132     		adds	r2, r2, #1
  394 001c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 22
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 22
 
 
  395 001e 43F00103 		orr	r3, r3, #1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  440              		.section	.text.PWM_Start,"ax",%progbits
  441              		.align	2
  442              		.global	PWM_Start
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 23
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 23
 
 
  443              		.thumb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  799:Generated_Source\PSoC5/PWM.c **** 
  800:Generated_Source\PSoC5/PWM.c **** 
  801:Generated_Source\PSoC5/PWM.c ****     /*******************************************************************************
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 24
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 24
 
 
  802:Generated_Source\PSoC5/PWM.c ****     * Function Name: PWM_ReadCompare
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  497 0006 7047     		bx	lr
  498              	.L52:
  499              		.align	2
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 25
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 25
 
 
  500              	.L51:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  534              		.thumb
  535              		.thumb_func
  536              		.type	PWM_ReadPeriod, %function
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 26
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 26
 
 
  537              	PWM_ReadPeriod:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  565              	.Letext0:
  566              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  567              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 27
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 27
 
 
  568              		.section	.debug_info,"",%progbits
@@ -1570,15 +1570,15 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  574 000b 01       		.uleb128 0x1
  575 000c 8B000000 		.4byte	.LASF45
  576 0010 0C       		.byte	0xc
- 577 0011 3E030000 		.4byte	.LASF46
- 578 0015 4E010000 		.4byte	.LASF47
+ 577 0011 47030000 		.4byte	.LASF46
+ 578 0015 8C010000 		.4byte	.LASF47
  579 0019 00000000 		.4byte	.Ldebug_ranges0+0
  580 001d 00000000 		.4byte	0
  581 0021 00000000 		.4byte	.Ldebug_line0
  582 0025 02       		.uleb128 0x2
  583 0026 01       		.byte	0x1
  584 0027 06       		.byte	0x6
- 585 0028 EB020000 		.4byte	.LASF0
+ 585 0028 F4020000 		.4byte	.LASF0
  586 002c 02       		.uleb128 0x2
  587 002d 01       		.byte	0x1
  588 002e 08       		.byte	0x8
@@ -1586,7 +1586,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  590 0033 02       		.uleb128 0x2
  591 0034 02       		.byte	0x2
  592 0035 05       		.byte	0x5
- 593 0036 97020000 		.4byte	.LASF2
+ 593 0036 A0020000 		.4byte	.LASF2
  594 003a 02       		.uleb128 0x2
  595 003b 02       		.byte	0x2
  596 003c 07       		.byte	0x7
@@ -1594,7 +1594,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  598 0041 02       		.uleb128 0x2
  599 0042 04       		.byte	0x4
  600 0043 05       		.byte	0x5
- 601 0044 BB020000 		.4byte	.LASF4
+ 601 0044 C4020000 		.4byte	.LASF4
  602 0048 02       		.uleb128 0x2
  603 0049 04       		.byte	0x4
  604 004a 07       		.byte	0x7
@@ -1602,7 +1602,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  606 004f 02       		.uleb128 0x2
  607 0050 08       		.byte	0x8
  608 0051 05       		.byte	0x5
- 609 0052 40020000 		.4byte	.LASF6
+ 609 0052 49020000 		.4byte	.LASF6
  610 0056 02       		.uleb128 0x2
  611 0057 08       		.byte	0x8
  612 0058 07       		.byte	0x7
@@ -1614,17 +1614,17 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  618 0064 02       		.uleb128 0x2
  619 0065 04       		.byte	0x4
  620 0066 07       		.byte	0x7
- 621 0067 BF010000 		.4byte	.LASF8
+ 621 0067 7F010000 		.4byte	.LASF8
  622 006b 04       		.uleb128 0x4
  623 006c 40010000 		.4byte	.LASF9
  624 0070 02       		.byte	0x2
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 28
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 28
 
 
  625 0071 E801     		.2byte	0x1e8
  626 0073 2C000000 		.4byte	0x2c
  627 0077 04       		.uleb128 0x4
- 628 0078 95010000 		.4byte	.LASF10
+ 628 0078 55010000 		.4byte	.LASF10
  629 007c 02       		.byte	0x2
  630 007d E901     		.2byte	0x1e9
  631 007f 3A000000 		.4byte	0x3a
@@ -1635,11 +1635,11 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  636 008a 02       		.uleb128 0x2
  637 008b 08       		.byte	0x8
  638 008c 04       		.byte	0x4
- 639 008d 8E010000 		.4byte	.LASF12
+ 639 008d 4E010000 		.4byte	.LASF12
  640 0091 02       		.uleb128 0x2
  641 0092 01       		.byte	0x1
  642 0093 08       		.byte	0x8
- 643 0094 C4020000 		.4byte	.LASF13
+ 643 0094 CD020000 		.4byte	.LASF13
  644 0098 04       		.uleb128 0x4
  645 0099 19010000 		.4byte	.LASF14
  646 009d 02       		.byte	0x2
@@ -1657,13 +1657,13 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  658 00ba 02       		.uleb128 0x2
  659 00bb 08       		.byte	0x8
  660 00bc 04       		.byte	0x4
- 661 00bd 16020000 		.4byte	.LASF16
+ 661 00bd 1F020000 		.4byte	.LASF16
  662 00c1 02       		.uleb128 0x2
  663 00c2 04       		.byte	0x4
  664 00c3 07       		.byte	0x7
- 665 00c4 37020000 		.4byte	.LASF17
+ 665 00c4 40020000 		.4byte	.LASF17
  666 00c8 06       		.uleb128 0x6
- 667 00c9 FF020000 		.4byte	.LASF18
+ 667 00c9 08030000 		.4byte	.LASF18
  668 00cd 01       		.byte	0x1
  669 00ce C7       		.byte	0xc7
  670 00cf 00000000 		.4byte	.LFB2
@@ -1671,18 +1671,18 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  672 00d7 01       		.uleb128 0x1
  673 00d8 9C       		.byte	0x9c
  674 00d9 06       		.uleb128 0x6
- 675 00da B2020000 		.4byte	.LASF19
+ 675 00da BB020000 		.4byte	.LASF19
  676 00de 01       		.byte	0x1
  677 00df E9       		.byte	0xe9
  678 00e0 00000000 		.4byte	.LFB3
  679 00e4 10000000 		.4byte	.LFE3-.LFB3
  680 00e8 01       		.uleb128 0x1
  681 00e9 9C       		.byte	0x9c
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 29
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 29
 
 
  682 00ea 07       		.uleb128 0x7
- 683 00eb A1020000 		.4byte	.LASF20
+ 683 00eb AA020000 		.4byte	.LASF20
  684 00ef 01       		.byte	0x1
  685 00f0 9301     		.2byte	0x193
  686 00f2 00000000 		.4byte	.LFB4
@@ -1708,7 +1708,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  706 0123 01       		.uleb128 0x1
  707 0124 9C       		.byte	0x9c
  708 0125 07       		.uleb128 0x7
- 709 0126 06020000 		.4byte	.LASF21
+ 709 0126 0F020000 		.4byte	.LASF21
  710 012a 01       		.byte	0x1
  711 012b E201     		.2byte	0x1e2
  712 012d 00000000 		.4byte	.LFB7
@@ -1725,7 +1725,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  723 0148 50       		.byte	0x50
  724 0149 00       		.byte	0
  725 014a 07       		.uleb128 0x7
- 726 014b E2010000 		.4byte	.LASF24
+ 726 014b EB010000 		.4byte	.LASF24
  727 014f 01       		.byte	0x1
  728 0150 2B02     		.2byte	0x22b
  729 0152 00000000 		.4byte	.LFB8
@@ -1734,18 +1734,18 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  732 015b 9C       		.byte	0x9c
  733 015c 6F010000 		.4byte	0x16f
  734 0160 08       		.uleb128 0x8
- 735 0161 F7020000 		.4byte	.LASF25
+ 735 0161 00030000 		.4byte	.LASF25
  736 0165 01       		.byte	0x1
  737 0166 2B02     		.2byte	0x22b
  738 0168 77000000 		.4byte	0x77
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 30
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 30
 
 
  739 016c 01       		.uleb128 0x1
  740 016d 50       		.byte	0x50
  741 016e 00       		.byte	0
  742 016f 07       		.uleb128 0x7
- 743 0170 F4010000 		.4byte	.LASF26
+ 743 0170 FD010000 		.4byte	.LASF26
  744 0174 01       		.byte	0x1
  745 0175 4802     		.2byte	0x248
  746 0177 00000000 		.4byte	.LFB9
@@ -1754,7 +1754,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  749 0180 9C       		.byte	0x9c
  750 0181 94010000 		.4byte	0x194
  751 0185 08       		.uleb128 0x8
- 752 0186 F7020000 		.4byte	.LASF25
+ 752 0186 00030000 		.4byte	.LASF25
  753 018a 01       		.byte	0x1
  754 018b 4802     		.2byte	0x248
  755 018d 77000000 		.4byte	0x77
@@ -1762,7 +1762,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  757 0192 50       		.byte	0x50
  758 0193 00       		.byte	0
  759 0194 07       		.uleb128 0x7
- 760 0195 22020000 		.4byte	.LASF27
+ 760 0195 2B020000 		.4byte	.LASF27
  761 0199 01       		.byte	0x1
  762 019a AC02     		.2byte	0x2ac
  763 019c 00000000 		.4byte	.LFB10
@@ -1771,7 +1771,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  766 01a5 9C       		.byte	0x9c
  767 01a6 B9010000 		.4byte	0x1b9
  768 01aa 08       		.uleb128 0x8
- 769 01ab 4E020000 		.4byte	.LASF28
+ 769 01ab 57020000 		.4byte	.LASF28
  770 01af 01       		.byte	0x1
  771 01b0 AC02     		.2byte	0x2ac
  772 01b2 6B000000 		.4byte	0x6b
@@ -1779,7 +1779,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  774 01b7 50       		.byte	0x50
  775 01b8 00       		.byte	0
  776 01b9 09       		.uleb128 0x9
- 777 01ba 0A030000 		.4byte	.LASF30
+ 777 01ba 13030000 		.4byte	.LASF30
  778 01be 01       		.byte	0x1
  779 01bf C702     		.2byte	0x2c7
  780 01c1 6B000000 		.4byte	0x6b
@@ -1788,7 +1788,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  783 01cd 01       		.uleb128 0x1
  784 01ce 9C       		.byte	0x9c
  785 01cf 0A       		.uleb128 0xa
- 786 01d0 21030000 		.4byte	.LASF48
+ 786 01d0 2A030000 		.4byte	.LASF48
  787 01d4 01       		.byte	0x1
  788 01d5 E102     		.2byte	0x2e1
  789 01d7 6B000000 		.4byte	0x6b
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  793 01e4 9C       		.byte	0x9c
  794 01e5 F8010000 		.4byte	0x1f8
  795 01e9 0B       		.uleb128 0xb
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 31
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 31
 
 
  796 01ea 0F000000 		.4byte	.LASF36
@@ -1809,7 +1809,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  801 01f6 50       		.byte	0x50
  802 01f7 00       		.byte	0
  803 01f8 07       		.uleb128 0x7
- 804 01f9 5C020000 		.4byte	.LASF31
+ 804 01f9 65020000 		.4byte	.LASF31
  805 01fd 01       		.byte	0x1
  806 01fe FD02     		.2byte	0x2fd
  807 0200 00000000 		.4byte	.LFB13
@@ -1858,18 +1858,18 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  850 0267 68000000 		.4byte	.LFE1-.LFB1
  851 026b 01       		.uleb128 0x1
  852 026c 9C       		.byte	0x9c
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 32
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 32
 
 
  853 026d 0E030000 		.4byte	0x30e
  854 0271 0E       		.uleb128 0xe
- 855 0272 39030000 		.4byte	.LASF37
+ 855 0272 42030000 		.4byte	.LASF37
  856 0276 01       		.byte	0x1
  857 0277 57       		.byte	0x57
  858 0278 6B000000 		.4byte	0x6b
  859 027c 00000000 		.4byte	.LLST0
  860 0280 0E       		.uleb128 0xe
- 861 0281 75020000 		.4byte	.LASF38
+ 861 0281 7E020000 		.4byte	.LASF38
  862 0285 01       		.byte	0x1
  863 0286 5D       		.byte	0x5d
  864 0287 6B000000 		.4byte	0x6b
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  907 02de 00       		.byte	0
  908 02df 0F       		.uleb128 0xf
  909 02e0 46000000 		.4byte	.LVL15
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 33
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 33
 
 
  910 02e4 94010000 		.4byte	0x194
@@ -1956,7 +1956,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  942 0331 C8000000 		.4byte	0xc8
  943 0335 00       		.byte	0
  944 0336 09       		.uleb128 0x9
- 945 0337 C9020000 		.4byte	.LASF40
+ 945 0337 D2020000 		.4byte	.LASF40
  946 033b 01       		.byte	0x1
  947 033c 4A03     		.2byte	0x34a
  948 033e 77000000 		.4byte	0x77
@@ -1965,7 +1965,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  951 034a 01       		.uleb128 0x1
  952 034b 9C       		.byte	0x9c
  953 034c 09       		.uleb128 0x9
- 954 034d DA020000 		.4byte	.LASF41
+ 954 034d E3020000 		.4byte	.LASF41
  955 0351 01       		.byte	0x1
  956 0352 5E03     		.2byte	0x35e
  957 0354 77000000 		.4byte	0x77
@@ -1974,11 +1974,11 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  960 0360 01       		.uleb128 0x1
  961 0361 9C       		.byte	0x9c
  962 0362 09       		.uleb128 0x9
- 963 0363 88020000 		.4byte	.LASF42
+ 963 0363 91020000 		.4byte	.LASF42
  964 0367 01       		.byte	0x1
  965 0368 7403     		.2byte	0x374
  966 036a 77000000 		.4byte	0x77
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 34
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 34
 
 
  967 036e 00000000 		.4byte	.LFB17
@@ -1986,7 +1986,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  969 0376 01       		.uleb128 0x1
  970 0377 9C       		.byte	0x9c
  971 0378 11       		.uleb128 0x11
- 972 0379 9C010000 		.4byte	.LASF49
+ 972 0379 5C010000 		.4byte	.LASF49
  973 037d 01       		.byte	0x1
  974 037e 20       		.byte	0x20
  975 037f 6B000000 		.4byte	0x6b
@@ -1994,13 +1994,13 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  977 0384 03       		.byte	0x3
  978 0385 00000000 		.4byte	PWM_initVar
  979 0389 12       		.uleb128 0x12
- 980 038a A8010000 		.4byte	.LASF43
- 981 038e A8010000 		.4byte	.LASF43
+ 980 038a 68010000 		.4byte	.LASF43
+ 981 038e 68010000 		.4byte	.LASF43
  982 0392 03       		.byte	0x3
  983 0393 7D       		.byte	0x7d
  984 0394 12       		.uleb128 0x12
- 985 0395 CC010000 		.4byte	.LASF44
- 986 0399 CC010000 		.4byte	.LASF44
+ 985 0395 D5010000 		.4byte	.LASF44
+ 986 0399 D5010000 		.4byte	.LASF44
  987 039d 03       		.byte	0x3
  988 039e 7E       		.byte	0x7e
  989 039f 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1021 001d 00       		.byte	0
  1022 001e 03       		.uleb128 0x3
  1023 001f 24       		.uleb128 0x24
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 35
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 35
 
 
  1024 0020 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1078 0057 01       		.byte	0x1
  1079 0058 3F       		.uleb128 0x3f
  1080 0059 19       		.uleb128 0x19
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 36
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 36
 
 
  1081 005a 03       		.uleb128 0x3
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1135 0091 40       		.uleb128 0x40
  1136 0092 18       		.uleb128 0x18
  1137 0093 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 37
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 37
 
 
  1138 0095 19       		.uleb128 0x19
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1192 00ce 0D       		.uleb128 0xd
  1193 00cf 2E       		.uleb128 0x2e
  1194 00d0 01       		.byte	0x1
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 38
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 38
 
 
  1195 00d1 3F       		.uleb128 0x3f
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1249 010d 18       		.uleb128 0x18
  1250 010e 00       		.byte	0
  1251 010f 00       		.byte	0
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 39
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 39
 
 
  1252 0110 11       		.uleb128 0x11
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1306 0006 00000000 		.4byte	.Ldebug_info0
  1307 000a 04       		.byte	0x4
  1308 000b 00       		.byte	0
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 40
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 40
 
 
  1309 000c 0000     		.2byte	0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1363 0030 00000000 		.4byte	.LFB9
  1364 0034 0C000000 		.4byte	.LFE9
  1365 0038 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 41
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 41
 
 
  1366 003c 0C000000 		.4byte	.LFE10
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1405      7420756E 
  1405      7369676E 
  1405      65642069 
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 42
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 42
 
 
  1405      6E7400
@@ -2518,174 +2518,174 @@ ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 1
  1427 0140 75696E74 		.ascii	"uint8\000"
  1427      3800
  1428              	.LASF32:
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 43
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 43
 
 
  1429 0146 636F6E74 		.ascii	"control\000"
  1429      726F6C00 
- 1430              	.LASF47:
- 1431 014e 433A5C55 		.ascii	"C:\\Users\\harri\\Documents\\code\\C\\Calibrated_Ro"
- 1431      73657273 
- 1431      5C686172 
- 1431      72695C44 
- 1431      6F63756D 
- 1432 017b 626F745C 		.ascii	"bot\\Design01.cydsn\000"
- 1432      44657369 
- 1432      676E3031 
- 1432      2E637964 
- 1432      736E00
- 1433              	.LASF12:
- 1434 018e 646F7562 		.ascii	"double\000"
- 1434      6C6500
- 1435              	.LASF10:
- 1436 0195 75696E74 		.ascii	"uint16\000"
- 1436      313600
- 1437              	.LASF49:
- 1438 019c 50574D5F 		.ascii	"PWM_initVar\000"
- 1438      696E6974 
- 1438      56617200 
- 1439              	.LASF43:
- 1440 01a8 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1440      74657243 
- 1440      72697469 
- 1440      63616C53 
- 1440      65637469 
- 1441              	.LASF8:
- 1442 01bf 756E7369 		.ascii	"unsigned int\000"
- 1442      676E6564 
- 1442      20696E74 
- 1442      00
+ 1430              	.LASF12:
+ 1431 014e 646F7562 		.ascii	"double\000"
+ 1431      6C6500
+ 1432              	.LASF10:
+ 1433 0155 75696E74 		.ascii	"uint16\000"
+ 1433      313600
+ 1434              	.LASF49:
+ 1435 015c 50574D5F 		.ascii	"PWM_initVar\000"
+ 1435      696E6974 
+ 1435      56617200 
+ 1436              	.LASF43:
+ 1437 0168 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1437      74657243 
+ 1437      72697469 
+ 1437      63616C53 
+ 1437      65637469 
+ 1438              	.LASF8:
+ 1439 017f 756E7369 		.ascii	"unsigned int\000"
+ 1439      676E6564 
+ 1439      20696E74 
+ 1439      00
+ 1440              	.LASF47:
+ 1441 018c 443A5C45 		.ascii	"D:\\Engineering\\Code\\C\\School\\robotics_final\\R"
+ 1441      6E67696E 
+ 1441      65657269 
+ 1441      6E675C43 
+ 1441      6F64655C 
+ 1442 01b9 6F626F74 		.ascii	"obotArm_Psoc\\Design01.cydsn\000"
+ 1442      41726D5F 
+ 1442      50736F63 
+ 1442      5C446573 
+ 1442      69676E30 
  1443              	.LASF44:
- 1444 01cc 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1444 01d5 43794578 		.ascii	"CyExitCriticalSection\000"
  1444      69744372 
  1444      69746963 
  1444      616C5365 
  1444      6374696F 
  1445              	.LASF24:
- 1446 01e2 50574D5F 		.ascii	"PWM_WriteCompare1\000"
+ 1446 01eb 50574D5F 		.ascii	"PWM_WriteCompare1\000"
  1446      57726974 
  1446      65436F6D 
  1446      70617265 
  1446      3100
  1447              	.LASF26:
- 1448 01f4 50574D5F 		.ascii	"PWM_WriteCompare2\000"
+ 1448 01fd 50574D5F 		.ascii	"PWM_WriteCompare2\000"
  1448      57726974 
  1448      65436F6D 
  1448      70617265 
  1448      3200
  1449              	.LASF21:
- 1450 0206 50574D5F 		.ascii	"PWM_WritePeriod\000"
+ 1450 020f 50574D5F 		.ascii	"PWM_WritePeriod\000"
  1450      57726974 
  1450      65506572 
  1450      696F6400 
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 44
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 44
 
 
  1451              	.LASF16:
- 1452 0216 6C6F6E67 		.ascii	"long double\000"
+ 1452 021f 6C6F6E67 		.ascii	"long double\000"
  1452      20646F75 
  1452      626C6500 
  1453              	.LASF27:
- 1454 0222 50574D5F 		.ascii	"PWM_SetInterruptMode\000"
+ 1454 022b 50574D5F 		.ascii	"PWM_SetInterruptMode\000"
  1454      53657449 
  1454      6E746572 
  1454      72757074 
  1454      4D6F6465 
  1455              	.LASF17:
- 1456 0237 73697A65 		.ascii	"sizetype\000"
+ 1456 0240 73697A65 		.ascii	"sizetype\000"
  1456      74797065 
  1456      00
  1457              	.LASF6:
- 1458 0240 6C6F6E67 		.ascii	"long long int\000"
+ 1458 0249 6C6F6E67 		.ascii	"long long int\000"
  1458      206C6F6E 
  1458      6720696E 
  1458      7400
  1459              	.LASF28:
- 1460 024e 696E7465 		.ascii	"interruptMode\000"
+ 1460 0257 696E7465 		.ascii	"interruptMode\000"
  1460      72727570 
  1460      744D6F64 
  1460      6500
  1461              	.LASF31:
- 1462 025c 50574D5F 		.ascii	"PWM_WriteControlRegister\000"
+ 1462 0265 50574D5F 		.ascii	"PWM_WriteControlRegister\000"
  1462      57726974 
  1462      65436F6E 
  1462      74726F6C 
  1462      52656769 
  1463              	.LASF38:
- 1464 0275 50574D5F 		.ascii	"PWM_interruptState\000"
+ 1464 027e 50574D5F 		.ascii	"PWM_interruptState\000"
  1464      696E7465 
  1464      72727570 
  1464      74537461 
  1464      746500
  1465              	.LASF42:
- 1466 0288 50574D5F 		.ascii	"PWM_ReadPeriod\000"
+ 1466 0291 50574D5F 		.ascii	"PWM_ReadPeriod\000"
  1466      52656164 
  1466      50657269 
  1466      6F6400
  1467              	.LASF2:
- 1468 0297 73686F72 		.ascii	"short int\000"
+ 1468 02a0 73686F72 		.ascii	"short int\000"
  1468      7420696E 
  1468      7400
  1469              	.LASF20:
- 1470 02a1 50574D5F 		.ascii	"PWM_WriteCounter\000"
+ 1470 02aa 50574D5F 		.ascii	"PWM_WriteCounter\000"
  1470      57726974 
  1470      65436F75 
  1470      6E746572 
  1470      00
  1471              	.LASF19:
- 1472 02b2 50574D5F 		.ascii	"PWM_Stop\000"
+ 1472 02bb 50574D5F 		.ascii	"PWM_Stop\000"
  1472      53746F70 
  1472      00
  1473              	.LASF4:
- 1474 02bb 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\harri\AppData\Local\Temp\cc55tPrn.s 			page 45
+ 1474 02c4 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\harri\AppData\Local\Temp\ccS0ylBg.s 			page 45
 
 
  1474      20696E74 
  1474      00
  1475              	.LASF13:
- 1476 02c4 63686172 		.ascii	"char\000"
+ 1476 02cd 63686172 		.ascii	"char\000"
  1476      00
  1477              	.LASF40:
- 1478 02c9 50574D5F 		.ascii	"PWM_ReadCompare1\000"
+ 1478 02d2 50574D5F 		.ascii	"PWM_ReadCompare1\000"
  1478      52656164 
  1478      436F6D70 
  1478      61726531 
  1478      00
  1479              	.LASF41:
- 1480 02da 50574D5F 		.ascii	"PWM_ReadCompare2\000"
+ 1480 02e3 50574D5F 		.ascii	"PWM_ReadCompare2\000"
  1480      52656164 
  1480      436F6D70 
  1480      61726532 
  1480      00
  1481              	.LASF0:
- 1482 02eb 7369676E 		.ascii	"signed char\000"
+ 1482 02f4 7369676E 		.ascii	"signed char\000"
  1482      65642063 
  1482      68617200 
  1483              	.LASF25:
- 1484 02f7 636F6D70 		.ascii	"compare\000"
+ 1484 0300 636F6D70 		.ascii	"compare\000"
  1484      61726500 
  1485              	.LASF18:
- 1486 02ff 50574D5F 		.ascii	"PWM_Enable\000"
+ 1486 0308 50574D5F 		.ascii	"PWM_Enable\000"
  1486      456E6162 
  1486      6C6500
  1487              	.LASF30:
- 1488 030a 50574D5F 		.ascii	"PWM_ReadStatusRegister\000"
+ 1488 0313 50574D5F 		.ascii	"PWM_ReadStatusRegister\000"
  1488      52656164 
  1488      53746174 
  1488      75735265 
  1488      67697374 
  1489              	.LASF48:
- 1490 0321 50574D5F 		.ascii	"PWM_ReadControlRegister\000"
+ 1490 032a 50574D5F 		.ascii	"PWM_ReadControlRegister\000"
  1490      52656164 
  1490      436F6E74 
  1490      726F6C52 
  1490      65676973 
  1491              	.LASF37:
- 1492 0339 6374726C 		.ascii	"ctrl\000"
+ 1492 0342 6374726C 		.ascii	"ctrl\000"
  1492      00
  1493              	.LASF46:
- 1494 033e 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM.c\000"
+ 1494 0347 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM.c\000"
  1494      72617465 
  1494      645F536F 
  1494      75726365 
